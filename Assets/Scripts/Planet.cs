@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour {
 
+	Rarity r;
+	Biome b;
+	Hazard h;
+
 	// Use this for initialization
 	void Start () {
 		
