@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Galaxy : MonoBehaviour {
+public class Universe : MonoBehaviour {
 
-	private Planet[] planets;
-	private int universe_pos;
-
-	private string name;
+	private Galaxy[] galaxies;
 
 	// Use this for initialization
 	void Start () {
