@@ -18,6 +18,8 @@ public class Satellite : MonoBehaviour {
 	private int current_sprite;
 
 	private Rigidbody2D UFO;
+	public float movementSpeed= 5f;
+	private Vector3 targetPosition =  new Vector3(0, 0, 0);
 	// Use this for initialization
 	void Start () {
 		 UFO = GetComponent<Rigidbody2D> ();
@@ -30,10 +32,18 @@ public class Satellite : MonoBehaviour {
 
 	 void FixedUpdate()
     {
-		if (Input.GetMouseButtonUp(0))
-		  	Debug.Log(Input.mousePosition);
-			var v = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-			if(Input.GetMouseButtonUp(0))
-        		UFO.MovePosition(Camera.main.ScreenToWorldPoint(v));
+		// if (Input.GetMouseButtonUp(0))
+		  	// Debug.Log(Input.mousePosition);
+			
+			// var v = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);			  
+			// if(Input.GetMouseButtonUp(0))
+			// 	targetPosition = Camera.main.ScreenToWorldPoint(v);
+			Vector3 direction = (targetPosition - transform.position).normalized;
+			UFO.MovePosition(transform.position + direction * movementSpeed * Time.deltaTime);    
+           		    		
     }
+
+	public void SetTargetPosition(Vector3 position){
+		targetPosition = position;
+	}
 }

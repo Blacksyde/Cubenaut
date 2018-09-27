@@ -12,7 +12,9 @@ public class Planet : MonoBehaviour {
 	private int earth_dist;
 	private int galaxy_pos;
 
-	private string name;
+	public string name;
+
+	public Satellite UFO;
 
 	// Use this for initialization
 	void Start () {
@@ -22,5 +24,17 @@ public class Planet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		
 	}
+
+	void OnMouseOver () {
+		if(Input.GetMouseButtonDown(0)){
+			Debug.Log(transform.position);
+			UFO.SetTargetPosition(transform.position);
+			
+		}
+
+	}
+
+	
 }

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 108300678}
   - component: {fileID: 108300679}
   - component: {fileID: 108300680}
+  - component: {fileID: 108300681}
   m_Layer: 0
   m_Name: BlueCircle
   m_TagString: Untagged
@@ -201,6 +202,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation_speed: 150
+--- !u!114 &108300681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 108300677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!1 &159868745
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!114 &219577128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d382548f6aff0e04d9fa692d879ba44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 50
 --- !u!212 &266810134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -623,14 +640,14 @@ Rigidbody2D:
   m_GameObject: {fileID: 266810132}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -644,6 +661,7 @@ GameObject:
   - component: {fileID: 336300735}
   - component: {fileID: 336300736}
   - component: {fileID: 336300737}
+  - component: {fileID: 336300738}
   m_Layer: 0
   m_Name: Purple-Planet
   m_TagString: Untagged
@@ -722,6 +740,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation_speed: 60
+--- !u!114 &336300738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336300734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!1 &449317788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,6 +1352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!114 &1090042950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,6 +1376,7 @@ GameObject:
   - component: {fileID: 1190344989}
   - component: {fileID: 1190344990}
   - component: {fileID: 1190344991}
+  - component: {fileID: 1190344992}
   m_Layer: 0
   m_Name: Lava-PLanet
   m_TagString: Untagged
@@ -1421,6 +1455,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation_speed: 100
+--- !u!114 &1190344992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190344988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!1 &1216662690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1628,7 @@ GameObject:
   - component: {fileID: 1241548844}
   - component: {fileID: 1241548845}
   - component: {fileID: 1241548846}
+  - component: {fileID: 1241548847}
   m_Layer: 0
   m_Name: Orange-Planet
   m_TagString: Untagged
@@ -1659,6 +1707,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation_speed: 30
+--- !u!114 &1241548847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241548843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!1 &1292229590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  UFO: {fileID: 266810133}
 --- !u!114 &1358517460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +2004,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 114606966816919134, guid: a4404e7784522f245b8d9d4dabf77de5,
+        type: 2}
+      propertyPath: UFO
+      value: 
+      objectReference: {fileID: 266810133}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4404e7784522f245b8d9d4dabf77de5, type: 2}
   m_IsPrefabAsset: 0
