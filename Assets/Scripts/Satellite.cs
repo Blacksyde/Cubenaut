@@ -32,6 +32,8 @@ public class Satellite : MonoBehaviour {
     {
 		if (Input.GetMouseButtonUp(0))
 		  	Debug.Log(Input.mousePosition);
-        	UFO.MovePosition(Input.mousePosition);
+			var v = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+			if(Input.GetMouseButtonUp(0))
+        		UFO.MovePosition(Camera.main.ScreenToWorldPoint(v));
     }
 }
