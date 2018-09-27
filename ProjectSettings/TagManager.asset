@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Space
+    uniqueID: 2141335107
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Planet
+    uniqueID: 3077051079
     locked: 0

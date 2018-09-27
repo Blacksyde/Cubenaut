@@ -17,13 +17,21 @@ public class Satellite : MonoBehaviour {
 
 	private int current_sprite;
 
+	private Rigidbody2D UFO;
 	// Use this for initialization
 	void Start () {
-		
+		 UFO = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+	 void FixedUpdate()
+    {
+		if (Input.GetMouseButtonUp(0))
+		  	Debug.Log(Input.mousePosition);
+        	UFO.MovePosition(Input.mousePosition);
+    }
 }
