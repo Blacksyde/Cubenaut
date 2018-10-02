@@ -17,12 +17,15 @@ public class Satellite : MonoBehaviour {
 
 	private int current_sprite;
 
-	private Rigidbody2D UFO;
-	public float movementSpeed= 5f;
-	private Vector3 targetPosition =  new Vector3(0, 0, 0);
+	public Planet targetPlanet;
+
+	private Rigidbody2D body;
+
+	public float movementSpeed;
+
 	// Use this for initialization
 	void Start () {
-		 UFO = GetComponent<Rigidbody2D> ();
+		 body = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -32,18 +35,26 @@ public class Satellite : MonoBehaviour {
 
 	 void FixedUpdate()
     {
-		// if (Input.GetMouseButtonUp(0))
+		//if (Input.GetMouseButtonUp(0))
 		  	// Debug.Log(Input.mousePosition);
 			
 			// var v = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);			  
 			// if(Input.GetMouseButtonUp(0))
 			// 	targetPosition = Camera.main.ScreenToWorldPoint(v);
-			Vector3 direction = (targetPosition - transform.position).normalized;
-			UFO.MovePosition(transform.position + direction * movementSpeed * Time.deltaTime);    
-           		    		
+		if (targetPlanet) {
+			if ((transform.position - targetPlanet.transform.position).magnitude < 1) {
+				body.velocity = Vector3.zero;
+				this.transform.position = targetPlanet.transform.position;
+			} else {
+				Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
+				body.velocity = Vector3.zero;
+				body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime);
+			}
+		}
     }
 
-	public void SetTargetPosition(Vector3 position){
-		targetPosition = position;
+	public void SetTargetPlanet(Planet p){
+		targetPlanet = p;
+		Debug.Log("target planet set to "+targetPlanet.name);
 	}
 }

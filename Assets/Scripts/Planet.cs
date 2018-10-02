@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Planet : MonoBehaviour {
 
@@ -14,27 +16,20 @@ public class Planet : MonoBehaviour {
 
 	public string name;
 
-	public Satellite UFO;
+	public Satellite sat;
 
 	// Use this for initialization
 	void Start () {
-		
+		sat = Object.FindObjectOfType<Satellite> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		
-	}
-
-	void OnMouseOver () {
-		if(Input.GetMouseButtonDown(0)){
-			Debug.Log(transform.position);
-			UFO.SetTargetPosition(transform.position);
-			
-		}
 
 	}
 
-	
+	private void OnMouseDown(){
+		//Debug.Log("moused over and clicked "+transform.position);
+		sat.SetTargetPlanet(this);
+	}
 }

@@ -47,3 +47,6 @@ TagManager:
   - name: Planet
     uniqueID: 3077051079
     locked: 0
+  - name: Satellite
+    uniqueID: 941410209
+    locked: 0
