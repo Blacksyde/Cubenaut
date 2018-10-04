@@ -14,6 +14,8 @@ public class Planet : MonoBehaviour {
 	private int earth_dist;
 	private int galaxy_pos;
 
+	private Rotate rot;
+
 	public string name;
 
 	public Satellite sat;
@@ -21,11 +23,19 @@ public class Planet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sat = Object.FindObjectOfType<Satellite> ();
+
+		//randomize size of the planet
+		float scale = Random.Range (0.3f, 0.9f);
+		this.transform.localScale = new Vector3 (scale, scale, 1);
+		//randomize rotation speed/direction
+		int rotate = Random.Range (-100, 100);
+		rot = GetComponent<Rotate> ();
+		rot.rotation_speed = rotate;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
 	private void OnMouseDown(){

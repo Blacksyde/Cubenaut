@@ -55,6 +55,6 @@ public class Satellite : MonoBehaviour {
 
 	public void SetTargetPlanet(Planet p){
 		targetPlanet = p;
-		Debug.Log("target planet set to "+targetPlanet.name);
+		Debug.Log("Target planet set to "+targetPlanet.name);
 	}
 }
