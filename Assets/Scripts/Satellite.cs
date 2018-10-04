@@ -9,8 +9,10 @@ public class Satellite : MonoBehaviour {
 	private int money;
 	private int research;
 
+	private int curr_fuel;
 	private int fuel_cap;
 	private int scan_range;
+	private int curr_battery;
 	private int battery_cap;
 	private int hull_mat;
 	private int boost_lvl;
@@ -23,24 +25,27 @@ public class Satellite : MonoBehaviour {
 
 	public float movementSpeed;
 
+	public Transform fuelRing;
+	public Transform scannerRing;
+
 	// Use this for initialization
 	void Start () {
 		 body = GetComponent<Rigidbody2D> ();
+
+			//hard coding some values in to make sure the rings work
+		curr_fuel=50;
+		scan_range = 100;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		fuelRing.localScale = new Vector3 (1+(curr_fuel/10.0f), 1+(curr_fuel/10.0f), 1);
+		scannerRing.localScale = new Vector3(1+(scan_range/10.0f), 1+(scan_range/10.0f), 1);
 	}
 
 	 void FixedUpdate()
     {
-		//if (Input.GetMouseButtonUp(0))
-		  	// Debug.Log(Input.mousePosition);
-			
-			// var v = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);			  
-			// if(Input.GetMouseButtonUp(0))
-			// 	targetPosition = Camera.main.ScreenToWorldPoint(v);
 		if (targetPlanet) {
 			if ((transform.position - targetPlanet.transform.position).magnitude < 1) {
 				body.velocity = Vector3.zero;

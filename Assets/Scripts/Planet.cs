@@ -18,14 +18,14 @@ public class Planet : MonoBehaviour {
 
 	public string name;
 
-	public Satellite sat;
+	private Satellite sat;
 
 	// Use this for initialization
 	void Start () {
 		sat = Object.FindObjectOfType<Satellite> ();
 
 		//randomize size of the planet
-		float scale = Random.Range (0.3f, 0.9f);
+		float scale = Random.Range (0.3f, 0.7f);
 		this.transform.localScale = new Vector3 (scale, scale, 1);
 		//randomize rotation speed/direction
 		int rotate = Random.Range (-100, 100);
