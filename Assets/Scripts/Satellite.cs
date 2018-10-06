@@ -27,11 +27,12 @@ public class Satellite : MonoBehaviour {
 
 	public Transform fuelRing;
 	public Transform scannerRing;
-
+	private DialogManager Dialog;
+	private bool dialogFlag = false;
 	// Use this for initialization
 	void Start () {
 		 body = GetComponent<Rigidbody2D> ();
-
+		 Dialog = Object.FindObjectOfType<DialogManager> ();
 			//hard coding some values in to make sure the rings work
 		curr_fuel=50;
 		scan_range = 100;
@@ -42,10 +43,16 @@ public class Satellite : MonoBehaviour {
 	void Update () {
 		fuelRing.localScale = new Vector3 (1+(curr_fuel/10.0f), 1+(curr_fuel/10.0f), 1);
 		scannerRing.localScale = new Vector3(1+(scan_range/10.0f), 1+(scan_range/10.0f), 1);
+		if(dialogFlag){
+		if ((transform.position - targetPlanet.transform.position).magnitude < 7){
+				Dialog.TargetPlanet(targetPlanet);
+				dialogFlag = false;
+		}}
 	}
 
 	 void FixedUpdate()
     {
+			
 		if (targetPlanet) {
 			if ((transform.position - targetPlanet.transform.position).magnitude < 1) {
 				body.velocity = Vector3.zero;
@@ -60,6 +67,6 @@ public class Satellite : MonoBehaviour {
 
 	public void SetTargetPlanet(Planet p){
 		targetPlanet = p;
-		Debug.Log("Target planet set to "+targetPlanet.name);
+		dialogFlag = true;
 	}
 }

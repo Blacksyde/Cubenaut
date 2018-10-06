@@ -23,16 +23,15 @@ public class DialogManager : MonoBehaviour {
     {
         //Output this to console when the Button is clicked
 	   Dialog.SetActive(!Dialog.activeSelf);
-       Debug.Log("haha");
     }
 
 
 	public void TargetPlanet(Planet targetPlanet){
 		planetName.text = targetPlanet.name;
-		// rarity.txt = string.format("Rarity {0}",targetPlanet.rarity);
-		// biome.txt = string.format("biome {0}",targetPlanet.biome);
-		// hazard.txt = string.format("hazard {0}",targetPlanet.hazard);
-		// resource.txt = string.format("resource {0}",targetPlanet.resource);
+		// rarity.text = string.Format("Rarity {0}",targetPlanet.rarity);
+		// biome.text = string.Format("biome {0}",targetPlanet.biome);
+		// hazard.text = string.Format("hazard {0}",targetPlanet.hazard);
+		// resource.text = string.Format("resource {0}",targetPlanet.resource);
 		Dialog.SetActive(!Dialog.activeSelf);
 		
 	}

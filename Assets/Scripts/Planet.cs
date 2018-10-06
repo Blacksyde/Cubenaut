@@ -19,12 +19,12 @@ public class Planet : MonoBehaviour {
 	public string name;
 
 	private Satellite sat;
-	private DialogManager Dialog;
+	
 
 	// Use this for initialization
 	void Start () {
 		sat = Object.FindObjectOfType<Satellite> ();
-		Dialog = Object.FindObjectOfType<DialogManager> ();
+		
 		//randomize size of the planet
 		float scale = Random.Range (0.3f, 0.9f);
 		this.transform.localScale = new Vector3 (scale, scale, 1);
@@ -42,7 +42,7 @@ public class Planet : MonoBehaviour {
 	private void OnMouseDown(){
 		//Debug.Log("moused over and clicked "+transform.position);
 		sat.SetTargetPlanet(this);
-		Dialog.TargetPlanet(this);
+	
 
 	}
 }
