@@ -42,7 +42,5 @@ public class Planet : MonoBehaviour {
 	private void OnMouseDown(){
 		//Debug.Log("moused over and clicked "+transform.position);
 		sat.SetTargetPlanet(this);
-	
-
 	}
 }

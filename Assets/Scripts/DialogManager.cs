@@ -4,26 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour {
-	public Button collectButton;
+	public Button scanButton;
+	public Button travelButton;
 	public GameObject Dialog;
 	public Text planetName;
 	public Text rarity;
 	public Text biome;
 	public Text hazard;
 	public Text resource;
+
+	private Satellite sat;
    
 	// Use this for initialization
 	void Start () {
-		Button btn1 = collectButton.GetComponent<Button>();
-		btn1.onClick.AddListener(TaskOnClick);
+		scanButton.onClick.AddListener(OnScanClick);
+		travelButton.onClick.AddListener(OnTravelClick);
+		sat = Object.FindObjectOfType<Satellite> ();
 	}
 	
 
-	void TaskOnClick()
-    {
-        //Output this to console when the Button is clicked
-	   Dialog.SetActive(!Dialog.activeSelf);
+	void OnScanClick(){
+		sat.setMenuOpen(false);
+	    Dialog.SetActive(false);
+		sat.SetTargetPlanet(null); //set target to null so you go back to last planet
     }
+
+	void OnTravelClick(){
+		sat.setMenuOpen(false);
+		Dialog.SetActive(false);
+	}
 
 
 	public void TargetPlanet(Planet targetPlanet){
@@ -32,7 +41,7 @@ public class DialogManager : MonoBehaviour {
 		// biome.text = string.Format("biome {0}",targetPlanet.biome);
 		// hazard.text = string.Format("hazard {0}",targetPlanet.hazard);
 		// resource.text = string.Format("resource {0}",targetPlanet.resource);
-		Dialog.SetActive(!Dialog.activeSelf);
-		
+		Dialog.SetActive(true);
+		sat.setMenuOpen(true);
 	}
 }
