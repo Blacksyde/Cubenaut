@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 5
+  lastUpdatedAtString: 2018-10-11T18:33:03.440-05:00
+  initializedAtString: 2018-10-11T17:21:06.401-05:00
+  entries:
+  - path: Assets\Scenes\Main.unity
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scenes\Main.unity
+    projectPath: Assets\Scenes\Main.unity
+    originalPath: 
+    status: 3
+    staged: 1
+  - path: Assets\Scripts\DialogManager.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\DialogManager.cs
+    projectPath: Assets\Scripts\DialogManager.cs
+    originalPath: 
+    status: 3
+    staged: 1
+  - path: Assets\Scripts\Planet.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\Planet.cs
+    projectPath: Assets\Scripts\Planet.cs
+    originalPath: 
+    status: 3
+    staged: 1
+  - path: Assets\Scripts\planet_economy.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\planet_economy.cs
+    projectPath: Assets\Scripts\planet_economy.cs
+    originalPath: 
+    status: 5
+    staged: 1
+  - path: Assets\Scripts\Satellite.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\Satellite.cs
+    projectPath: Assets\Scripts\Satellite.cs
+    originalPath: 
+    status: 3
+    staged: 1
+  - path: Assets\Scripts\StatusManager.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\StatusManager.cs
+    projectPath: Assets\Scripts\StatusManager.cs
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Scripts\StatusManager.cs.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\StatusManager.cs.meta
+    projectPath: Assets\Scripts\StatusManager.cs.meta
+    originalPath: Assets\Scripts\planet_economy.cs.meta
+    status: 6
+    staged: 1
+  - path: Assets\Scripts\textbox.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\textbox.cs
+    projectPath: Assets\Scripts\textbox.cs
+    originalPath: Assets\textbox.cs
+    status: 6
+    staged: 1
+  - path: Assets\Scripts\textbox.cs.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\textbox.cs.meta
+    projectPath: Assets\Scripts\textbox.cs.meta
+    originalPath: Assets\textbox.cs.meta
+    status: 6
+    staged: 1
+  - path: Assets\Sprites\PLANETS.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS.meta
+    projectPath: Assets\Sprites\PLANETS.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\earth.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\earth.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\earth.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\earth.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\earth.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\earth.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\jupiter.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\jupiter.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\jupiter.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\jupiter.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\jupiter.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\jupiter.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\mars.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\mars.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\mars.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\mars.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\mars.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\mars.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\naptune.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\naptune.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\naptune.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\naptune.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\naptune.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\naptune.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET1.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET1.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET1.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET1.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET1.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET1.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET2.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET2.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET2.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET2.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET2.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET2.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET5.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET5.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET5.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET5.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET5.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET5.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET6.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET6.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET6.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET6.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET6.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET6.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET9.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET9.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET9.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\PLANET9.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET9.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET9.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\saturn.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\saturn.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\saturn.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\saturn.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\saturn.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\saturn.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\uranus.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\uranus.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\uranus.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\uranus.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\uranus.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\uranus.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\venus.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\venus.png
+    projectPath: Assets\Sprites\PLANETS\PLANET\venus.png
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Sprites\PLANETS\PLANET\venus.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\venus.png.meta
+    projectPath: Assets\Sprites\PLANETS\PLANET\venus.png.meta
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: ProjectSettings\ProjectVersion.txt
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\ProjectSettings\ProjectVersion.txt
+    projectPath: ProjectSettings\ProjectVersion.txt
+    originalPath: 
+    status: 3
+    staged: 1
+  - path: ProjectSettings\TimeManager.asset
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\ProjectSettings\TimeManager.asset
+    projectPath: ProjectSettings\TimeManager.asset
+    originalPath: 
+    status: 3
+    staged: 1

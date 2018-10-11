@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 
 public class Planet : MonoBehaviour {
 
-	public Rarity rarity;
-	public Biome biome;
-	public Hazard hazard;
-	public Resource resource;
+	public int rarity;
+	public int biome;
+	public int hazard;
+	public int resource;
 
 	private int earth_dist;
 	private int galaxy_pos;
@@ -26,7 +26,7 @@ public class Planet : MonoBehaviour {
 		sat = Object.FindObjectOfType<Satellite> ();
 		
 		//randomize size of the planet
-		float scale = Random.Range (0.3f, 0.9f);
+		float scale = Random.Range (0.9f, 1.2f);
 		this.transform.localScale = new Vector3 (scale, scale, 1);
 		//randomize rotation speed/direction
 		int rotate = Random.Range (-100, 100);
