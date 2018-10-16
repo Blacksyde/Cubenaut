@@ -12,228 +12,350 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-10-11T18:33:03.440-05:00
-  initializedAtString: 2018-10-11T17:21:06.401-05:00
+  lastUpdatedAtString: 2018-10-16T18:27:21.178-05:00
+  initializedAtString: 2018-10-16T17:07:45.767-05:00
   entries:
+  - path: Assembly-CSharp.csproj
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assembly-CSharp.csproj
+    projectPath: Assembly-CSharp.csproj
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assets\ProgressBar.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar.meta
+    projectPath: Assets\ProgressBar.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\How to use this asset.pdf
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\How to use this asset.pdf
+    projectPath: Assets\ProgressBar\How to use this asset.pdf
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\How to use this asset.pdf.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\How to use this asset.pdf.meta
+    projectPath: Assets\ProgressBar\How to use this asset.pdf.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene.meta
+    projectPath: Assets\ProgressBar\Scene.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\background.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\background.png
+    projectPath: Assets\ProgressBar\Scene\background.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\background.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\background.png.meta
+    projectPath: Assets\ProgressBar\Scene\background.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\Demo.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\Demo.cs
+    projectPath: Assets\ProgressBar\Scene\Demo.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\Demo.cs.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\Demo.cs.meta
+    projectPath: Assets\ProgressBar\Scene\Demo.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\Demo.unity
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\Demo.unity
+    projectPath: Assets\ProgressBar\Scene\Demo.unity
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\Demo.unity.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\Demo.unity.meta
+    projectPath: Assets\ProgressBar\Scene\Demo.unity.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\Text.controller
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\Text.controller
+    projectPath: Assets\ProgressBar\Scene\Text.controller
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\Text.controller.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\Text.controller.meta
+    projectPath: Assets\ProgressBar\Scene\Text.controller.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\TextAnimation.anim
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\TextAnimation.anim
+    projectPath: Assets\ProgressBar\Scene\TextAnimation.anim
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Scene\TextAnimation.anim.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Scene\TextAnimation.anim.meta
+    projectPath: Assets\ProgressBar\Scene\TextAnimation.anim.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Script.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Script.meta
+    projectPath: Assets\ProgressBar\Script.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Script\ProgressBar.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Script\ProgressBar.cs
+    projectPath: Assets\ProgressBar\Script\ProgressBar.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Script\ProgressBar.cs.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Script\ProgressBar.cs.meta
+    projectPath: Assets\ProgressBar\Script\ProgressBar.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Script\ProgressBarCircle.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Script\ProgressBarCircle.cs
+    projectPath: Assets\ProgressBar\Script\ProgressBarCircle.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Script\ProgressBarCircle.cs.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Script\ProgressBarCircle.cs.meta
+    projectPath: Assets\ProgressBar\Script\ProgressBarCircle.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sound.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sound.meta
+    projectPath: Assets\ProgressBar\Sound.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sound\beep.wav
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sound\beep.wav
+    projectPath: Assets\ProgressBar\Sound\beep.wav
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sound\beep.wav.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sound\beep.wav.meta
+    projectPath: Assets\ProgressBar\Sound\beep.wav.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites.meta
+    projectPath: Assets\ProgressBar\Sprites.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\bar.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\bar.png
+    projectPath: Assets\ProgressBar\Sprites\bar.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\bar.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\bar.png.meta
+    projectPath: Assets\ProgressBar\Sprites\bar.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar Blue gradient.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      Blue gradient.png
+    projectPath: Assets\ProgressBar\Sprites\Progressbar Blue gradient.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar Blue gradient.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      Blue gradient.png.meta
+    projectPath: Assets\ProgressBar\Sprites\Progressbar Blue gradient.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar circle Background.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      circle Background.png
+    projectPath: Assets\ProgressBar\Sprites\Progressbar circle Background.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar circle Background.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      circle Background.png.meta
+    projectPath: Assets\ProgressBar\Sprites\Progressbar circle Background.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar circle.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      circle.png
+    projectPath: Assets\ProgressBar\Sprites\Progressbar circle.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar circle.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      circle.png.meta
+    projectPath: Assets\ProgressBar\Sprites\Progressbar circle.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar Empty.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      Empty.png
+    projectPath: Assets\ProgressBar\Sprites\Progressbar Empty.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Progressbar Empty.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Progressbar
+      Empty.png.meta
+    projectPath: Assets\ProgressBar\Sprites\Progressbar Empty.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Spinner.anim
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Spinner.anim
+    projectPath: Assets\ProgressBar\Sprites\Spinner.anim
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Spinner.anim.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Spinner.anim.meta
+    projectPath: Assets\ProgressBar\Sprites\Spinner.anim.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Spinner.controller
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Spinner.controller
+    projectPath: Assets\ProgressBar\Sprites\Spinner.controller
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\Sprites\Spinner.controller.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\Sprites\Spinner.controller.meta
+    projectPath: Assets\ProgressBar\Sprites\Spinner.controller.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\UI ProgressBar.prefab
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\UI ProgressBar.prefab
+    projectPath: Assets\ProgressBar\UI ProgressBar.prefab
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\UI ProgressBar.prefab.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\UI ProgressBar.prefab.meta
+    projectPath: Assets\ProgressBar\UI ProgressBar.prefab.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\UI ProgressBarCircle.prefab
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\UI ProgressBarCircle.prefab
+    projectPath: Assets\ProgressBar\UI ProgressBarCircle.prefab
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\ProgressBar\UI ProgressBarCircle.prefab.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\ProgressBar\UI ProgressBarCircle.prefab.meta
+    projectPath: Assets\ProgressBar\UI ProgressBarCircle.prefab.meta
+    originalPath: 
+    status: 1
+    staged: 0
   - path: Assets\Scenes\Main.unity
     fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scenes\Main.unity
     projectPath: Assets\Scenes\Main.unity
     originalPath: 
     status: 3
-    staged: 1
-  - path: Assets\Scripts\DialogManager.cs
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\DialogManager.cs
-    projectPath: Assets\Scripts\DialogManager.cs
-    originalPath: 
-    status: 3
-    staged: 1
-  - path: Assets\Scripts\Planet.cs
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\Planet.cs
-    projectPath: Assets\Scripts\Planet.cs
-    originalPath: 
-    status: 3
-    staged: 1
-  - path: Assets\Scripts\planet_economy.cs
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\planet_economy.cs
-    projectPath: Assets\Scripts\planet_economy.cs
-    originalPath: 
-    status: 5
-    staged: 1
-  - path: Assets\Scripts\Satellite.cs
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\Satellite.cs
-    projectPath: Assets\Scripts\Satellite.cs
-    originalPath: 
-    status: 3
-    staged: 1
+    staged: 0
   - path: Assets\Scripts\StatusManager.cs
     fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\StatusManager.cs
     projectPath: Assets\Scripts\StatusManager.cs
     originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Scripts\StatusManager.cs.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\StatusManager.cs.meta
-    projectPath: Assets\Scripts\StatusManager.cs.meta
-    originalPath: Assets\Scripts\planet_economy.cs.meta
-    status: 6
-    staged: 1
-  - path: Assets\Scripts\textbox.cs
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\textbox.cs
-    projectPath: Assets\Scripts\textbox.cs
-    originalPath: Assets\textbox.cs
-    status: 6
-    staged: 1
-  - path: Assets\Scripts\textbox.cs.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\textbox.cs.meta
-    projectPath: Assets\Scripts\textbox.cs.meta
-    originalPath: Assets\textbox.cs.meta
-    status: 6
-    staged: 1
-  - path: Assets\Sprites\PLANETS.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS.meta
-    projectPath: Assets\Sprites\PLANETS.meta
+    status: 3
+    staged: 0
+  - path: Assets\Sprites\frame.png
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\frame.png
+    projectPath: Assets\Sprites\frame.png
     originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET.meta
+    status: 1
+    staged: 0
+  - path: Assets\Sprites\frame.png.meta
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\frame.png.meta
+    projectPath: Assets\Sprites\frame.png.meta
     originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\earth.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\earth.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\earth.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\earth.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\earth.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\earth.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\jupiter.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\jupiter.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\jupiter.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\jupiter.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\jupiter.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\jupiter.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\mars.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\mars.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\mars.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\mars.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\mars.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\mars.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\naptune.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\naptune.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\naptune.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\naptune.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\naptune.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\naptune.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET1.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET1.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET1.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET1.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET1.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET1.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET2.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET2.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET2.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET2.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET2.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET2.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET5.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET5.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET5.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET5.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET5.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET5.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET6.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET6.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET6.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET6.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET6.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET6.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET9.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET9.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET9.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\PLANET9.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\PLANET9.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\PLANET9.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\saturn.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\saturn.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\saturn.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\saturn.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\saturn.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\saturn.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\uranus.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\uranus.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\uranus.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\uranus.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\uranus.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\uranus.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\venus.png
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\venus.png
-    projectPath: Assets\Sprites\PLANETS\PLANET\venus.png
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: Assets\Sprites\PLANETS\PLANET\venus.png.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\PLANETS\PLANET\venus.png.meta
-    projectPath: Assets\Sprites\PLANETS\PLANET\venus.png.meta
-    originalPath: 
-    status: 4
-    staged: 1
-  - path: ProjectSettings\ProjectVersion.txt
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\ProjectSettings\ProjectVersion.txt
-    projectPath: ProjectSettings\ProjectVersion.txt
+    status: 1
+    staged: 0
+  - path: Library\assetDatabase3
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\assetDatabase3
+    projectPath: Library\assetDatabase3
     originalPath: 
     status: 3
-    staged: 1
-  - path: ProjectSettings\TimeManager.asset
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\ProjectSettings\TimeManager.asset
-    projectPath: ProjectSettings\TimeManager.asset
+    staged: 0
+  - path: Library\gfu\cache\gitlocks.yaml
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\gfu\cache\gitlocks.yaml
+    projectPath: Library\gfu\cache\gitlocks.yaml
     originalPath: 
     status: 3
-    staged: 1
+    staged: 0
+  - path: Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\gfu\cache\repoinfo.yaml
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\InspectorExpandedItems.asset
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\metadata\70\70a409438102e804ba12a71210153664
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\metadata\70\70a409438102e804ba12a71210153664
+    projectPath: Library\metadata\70\70a409438102e804ba12a71210153664
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp.dll
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\ScriptAssemblies\Assembly-CSharp.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
