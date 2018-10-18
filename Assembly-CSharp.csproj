@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Satellite.cs" />
      <Compile Include="Assets\Scripts\StatusManager.cs" />
+     <Compile Include="Assets\Scripts\SwitchtoUpgradeScene.cs" />
      <Compile Include="Assets\Scripts\textbox.cs" />
      <Compile Include="Assets\Scripts\Universe.cs" />
  <Reference Include="UnityEditor.StandardEvents">
