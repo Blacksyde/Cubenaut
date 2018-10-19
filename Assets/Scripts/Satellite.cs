@@ -5,14 +5,16 @@ using UnityEngine;
 public class Satellite : MonoBehaviour {
 
 	//may want to move these 3 to a game-manager-type script later
-	private int information;
-	private int money;
-	private int research;
+	public int information;
+	public int money;
+	public int research;
+	public int curr_fuel;
+	public int scan_range;
+	public int curr_battery;
 
-	private int curr_fuel;
+
 	private int fuel_cap;
-	private int scan_range;
-	private int curr_battery;
+
 	private int battery_cap;
 	private int hull_mat;
 	private int boost_lvl;
@@ -65,12 +67,7 @@ public class Satellite : MonoBehaviour {
 		}
 		fuelRing.localScale = new Vector3 (1+(curr_fuel/10.0f), 1+(curr_fuel/10.0f), 1);
 		scannerRing.localScale = new Vector3(1+(scan_range/5.0f), 1+(scan_range/5.0f), 1);
-		/* if(dialogFlag){
-			if ((transform.position - targetPlanet.transform.position).magnitude < 7){
-				Dialog.TargetPlanet(targetPlanet);
-				dialogFlag = false;
-			}
-		}*/
+	
 	}
 
 	void FixedUpdate()
@@ -98,7 +95,6 @@ public class Satellite : MonoBehaviour {
 		if(targetPlanet!=null)
 			lastPlanet=targetPlanet;
 		targetPlanet = p;
-		//dialogFlag = true;
 		Dialog.TargetPlanet(targetPlanet);
 		menuOpen=true;
 	}

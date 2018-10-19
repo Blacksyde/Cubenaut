@@ -13,4 +13,8 @@ public class Resource : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public static Resource getResource(Biome b){
+           return null;
+    }
 }

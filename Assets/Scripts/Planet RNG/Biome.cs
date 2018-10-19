@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Biome : MonoBehaviour {
+	public Hazard hazard;
+
+	public Resource resource;
+
+	public string name;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		hazard=Hazard.getHazard(this);
+		resource=Resource.getResource(this);
 	}
 }
