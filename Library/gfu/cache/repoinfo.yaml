@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2018-10-23T17:11:54.419-05:00
-  initializedAtString: 2018-10-23T17:11:54.419-05:00
+  lastUpdatedAtString: 2018-10-23T18:34:17.576-05:00
+  initializedAtString: 2018-10-23T18:34:17.576-05:00
   currentGitRemote:
     name: origin
     url: https://github.com/Blacksyde/Cubenaut.git
@@ -34,4 +34,4 @@ MonoBehaviour:
   currentConfigRemote:
     name: origin
     url: https://github.com/Blacksyde/Cubenaut.git
-  currentHead: 8dd408e
+  currentHead: a3b690c
