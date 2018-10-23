@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-	public static bool GameIsPaused = false;
+	public static bool MenuActive = false;
 	
 	public GameObject pauseMenuUI;
 	// Update is called once per frame
@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour {
 	{
 		if(Input.GetKeyDown(KeyCode.Escape))
 		{
-			if (GameIsPaused)
+			if (MenuActive)
 			{
 				Resume();
 			} else
@@ -25,15 +25,15 @@ public class PauseMenu : MonoBehaviour {
 	public void Resume ()
 	{
 		pauseMenuUI.SetActive(false);
-		Time.timeScale = 1f;
-		GameIsPaused = false;
+		TimeManager.Resume();
+		MenuActive = false;
 	}
 
 	void Pause ()
 	{
 		pauseMenuUI.SetActive(true);
-		Time.timeScale = 0f;
-		GameIsPaused = true;
+		TimeManager.Pause();
+		MenuActive = true;
 	}
 
 	public void Options()
@@ -44,5 +44,8 @@ public class PauseMenu : MonoBehaviour {
 	public void Exit()
 	{
 		Debug.Log("Exiting Game....");
+		Application.Quit();
+		
+		
 	}
 }

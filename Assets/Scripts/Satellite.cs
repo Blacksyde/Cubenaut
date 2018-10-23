@@ -123,10 +123,10 @@ public class Satellite : MonoBehaviour {
 
 	public void setMenuOpen(bool b){
 		if(b){
-			Time.timeScale=0.0f;
+			TimeManager.Pause();
 		}
 		else{
-			Time.timeScale=1.0f;
+			TimeManager.Resume();
 		}
 		menuOpen=b;
 	}
