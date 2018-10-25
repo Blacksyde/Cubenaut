@@ -67,8 +67,14 @@
      <Compile Include="Assets\Scripts\Planet RNG\Resource.cs" />
      <Compile Include="Assets\Scripts\Planet.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\Body.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\Booster.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\Heat.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\Probe.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\Scanner.cs" />
+     <Compile Include="Assets\Scripts\Satellite Upgrades\Subzero.cs" />
      <Compile Include="Assets\Scripts\Satellite.cs" />
-     <Compile Include="Assets\Scripts\Scanner.cs" />
      <Compile Include="Assets\Scripts\StatusManager.cs" />
      <Compile Include="Assets\Scripts\SwitchtoUpgradeScene.cs" />
      <Compile Include="Assets\Scripts\textbox.cs" />
