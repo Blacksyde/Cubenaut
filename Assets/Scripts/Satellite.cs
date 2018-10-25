@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class Satellite : MonoBehaviour {
 
-	//may want to move these 3 to a game-manager-type script later
+
+	public int curr_battery;
+	//upgrades
+	private Body Body;
+	private Scanner Scanner;
+	private Booster Booster;
+	private Probe Probe;
+	private Subzero Subzero;
+	private Heat Heat;
+	//economy
+	public int research;
 	public int information;
 	public int money;
-	public int research;
-	public int curr_fuel;
-	public int scan_range;
-	public int curr_battery;
 
 
-	private int fuel_cap;
 
-	private int battery_cap;
-	private int hull_mat;
-	private int boost_lvl;
+
+	//may want to move these 3 to a game-manager-type script later
+
 
 	private int current_sprite;
 
@@ -40,34 +45,39 @@ public class Satellite : MonoBehaviour {
 	void Start () {
 		body = GetComponent<Rigidbody2D> ();
 		Dialog = Object.FindObjectOfType<DialogManager> ();
+		Body = new Body();
+		Scanner = new Scanner();
+		Booster = new Booster();
+		Probe = new Probe();
+		Subzero = new Subzero();
+		Heat = new Heat();
+		Body.Start();
+		Scanner.Start();
+		Booster.Start();
+		Probe.Start();
+		Subzero.Start();
+		Heat.Start();
 		//hard coding some values in to make sure the rings work
-		curr_fuel=50;
-		scan_range = 100;
+		curr_battery = 100;
 		menuOpen=false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//hard-coding some keys to change the size of the rings (for testing/slice)
-		if(Input.GetKeyDown(KeyCode.O)){
-			curr_fuel-=10;
-			if(curr_fuel<0)
-				curr_fuel=0;
-		}
-		if(Input.GetKeyDown(KeyCode.P)){
-			curr_fuel+=10;
-		}
-		if(Input.GetKeyDown(KeyCode.K)){
-			scan_range-=10;
-			if(scan_range<0)
-				scan_range=0;
-		}
-		if(Input.GetKeyDown(KeyCode.L)){
-			scan_range+=10;
-		}
-		fuelRing.localScale = new Vector3 (1+(curr_fuel/10.0f), 1+(curr_fuel/10.0f), 1);
-		scannerRing.localScale = new Vector3(1+(scan_range/5.0f), 1+(scan_range/5.0f), 1);
-	
+
+		curr_battery = curr_battery/Body.health_range*100;
+		fuelRing.localScale = new Vector3 (1+(Booster.Ring_size/10.0f), 1+(Booster.Ring_size/10.0f), 1);
+		scannerRing.localScale = new Vector3(1+(Scanner.Scan_range/5.0f), 1+(Scanner.Scan_range/5.0f), 1);
+
+	}
+
+	public int getBoosterSize(){
+		return Booster.Ring_size;
+	}
+
+	public int getScannerRange(){
+		return Scanner.Scan_range;
 	}
 
 	void FixedUpdate()

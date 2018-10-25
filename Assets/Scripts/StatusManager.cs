@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class StatusManager : MonoBehaviour {
-	public Text curr_fuel;
+	public Text Booster_range;
 	public Text scan_range;
 	public Text curr_battery;
 	public ProgressBar Pb;
@@ -23,9 +23,8 @@ public class StatusManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Pb.BarValue = sat.curr_battery;
-		curr_fuel.text = string.Format("Fuel: {0}",sat.curr_fuel);
-		scan_range.text = string.Format("Scan Range: {0}",sat.scan_range);
-		curr_battery.text = string.Format("Battery: {0}",sat.curr_battery);
+		Booster_range.text = string.Format("Fuel: {0}",sat.getBoosterSize());
+		scan_range.text = string.Format("Scan Range: {0}",sat.getScannerRange());
 		research.text = string.Format("{0}",sat.research);
 		information.text = string.Format("{0}",sat.information);
 		money.text = string.Format("{0}",sat.money);
