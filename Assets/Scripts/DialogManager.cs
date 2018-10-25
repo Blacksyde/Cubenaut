@@ -41,7 +41,7 @@ public class DialogManager : MonoBehaviour {
 		rarity.text = "Rarity: "+targetPlanet.rarity.rarity_val;
 		hazard.text = "Hazard: "+targetPlanet.biome.hazard.type+" / Severity: "+targetPlanet.biome.hazard.severity+"% / Exists: "+targetPlanet.biome.hazard.exists;
 		biome.text = "Biome Name: "+targetPlanet.biome.name;
-		resource.text = "Resource: "+targetPlanet.biome.resource;
+		resource.text = "Resource Amount: "+targetPlanet.biome.resource.val;
 		Dialog.SetActive(true);
 		sat.setMenuOpen(true);
 	}
