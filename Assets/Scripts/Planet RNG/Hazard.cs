@@ -13,17 +13,6 @@ public class Hazard {
 	//this is a boolean to signify whether or not the hazard actually occurs 
 	public bool exists;
 
-	// Use this for initialization
-	void Start () {
-		type=-1;
-		severity=-1;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public static Hazard getHazard(Biome b){
 		Hazard haz=new Hazard();
 		haz.type=-1;
@@ -52,7 +41,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<20){
+			if(0<=ex&&ex<50){
 				haz.exists=true;
 			}
 			else{
@@ -77,7 +66,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<20){
+			if(0<=ex&&ex<50){
 				haz.exists=true;
 			}
 			else{
@@ -102,7 +91,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<20){
+			if(0<=ex&&ex<50){
 				haz.exists=true;
 			}
 			else{
@@ -127,7 +116,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<40){
+			if(0<=ex&&ex<60){
 				haz.exists=true;
 			}
 			else{
@@ -152,7 +141,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<40){
+			if(0<=ex&&ex<60){
 				haz.exists=true;
 			}
 			else{
@@ -177,7 +166,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<60){
+			if(0<=ex&&ex<70){
 				haz.exists=true;
 			}
 			else{
@@ -202,7 +191,7 @@ public class Hazard {
 			haz.severity=sev;
 
 			int ex = Random.Range(0,100);
-			if(0<=ex&&ex<60){
+			if(0<=ex&&ex<70){
 				haz.exists=true;
 			}
 			else{

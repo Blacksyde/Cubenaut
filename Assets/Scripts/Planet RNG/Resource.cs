@@ -6,16 +6,6 @@ public class Resource {
 
 	public int val;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public static Resource getResource(Biome b){
         Resource res=new Resource();
 		res.val=-1;
@@ -57,7 +47,7 @@ public class Resource {
 		else if(b.name=="Star"){
 			res.val=Random.Range(60,100);
 		}
-		
+
 		return res;
     }
 }
