@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hazard : MonoBehaviour {
+public class Hazard {
 
 	//this is either 0, 1, or 2, corresponding to frost, heat, and corrosion respectively
 	public int type;
 
 	//this is a 1-100 percentage value that affects how hurt the satellite will get by the hazard
 	public int severity;
+
+	//this is a boolean to signify whether or not the hazard actually occurs 
+	public bool exists;
 
 	// Use this for initialization
 	void Start () {
@@ -22,15 +25,15 @@ public class Hazard : MonoBehaviour {
 	}
 
 	public static Hazard getHazard(Biome b){
-		Hazard haz=null;
+		Hazard haz=new Hazard();
+		haz.type=-1;
+		haz.severity=-1;
 
 		//Average severity of hazards is based on tier.
 		// tier 0: 0-20, tier 1: 10-40, tier 2: 30-60, tier 3: 40-100
 
 		//0-100 value used to determine hazard type based on biome
 		int ty = Random.Range(0,100);
-
-		bool exists=false;
 
 		if(b.name=="Ice"){
 			//FROST - 90
@@ -47,6 +50,14 @@ public class Hazard : MonoBehaviour {
 			}
 			int sev = Random.Range(0,20);
 			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<20){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
+			}
 		}
 
 		else if(b.name=="Desert"){
@@ -61,6 +72,16 @@ public class Hazard : MonoBehaviour {
 			//FROST - 10
 			else {
 				haz.type=0;
+			}
+			int sev = Random.Range(0,20);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<20){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
 			}
 		}
 
@@ -77,6 +98,16 @@ public class Hazard : MonoBehaviour {
 			else {
 				haz.type=0;
 			}
+			int sev = Random.Range(0,20);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<20){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
+			}
 		}
 
 		else if(b.name=="Ocean"){
@@ -91,6 +122,16 @@ public class Hazard : MonoBehaviour {
 			//CORROSION - 10
 			else{
 				haz.type=2;
+			}
+			int sev = Random.Range(10,40);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<40){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
 			}
 		}
 
@@ -107,6 +148,16 @@ public class Hazard : MonoBehaviour {
 			else{
 				haz.type=0;
 			}
+			int sev = Random.Range(10,40);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<40){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
+			}
 		}
 
 		else if(b.name=="Forest"){
@@ -121,6 +172,16 @@ public class Hazard : MonoBehaviour {
 			//CORROSION - 33
 			else{
 				haz.type=2;
+			}
+			int sev = Random.Range(30,60);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<60){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
 			}
 		}
 
@@ -137,6 +198,16 @@ public class Hazard : MonoBehaviour {
 			else{
 				haz.type=0;
 			}
+			int sev = Random.Range(30,60);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<60){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
+			}
 		}
 
 		else if(b.name=="Inhabited"){
@@ -152,13 +223,29 @@ public class Hazard : MonoBehaviour {
 			else{
 				haz.type=2;
 			}
+			int sev = Random.Range(40,100);
+			haz.severity=sev;
+
+			int ex = Random.Range(0,100);
+			if(0<=ex&&ex<80){
+				haz.exists=true;
+			}
+			else{
+				haz.exists=false;
+			}
 		}
 
 		else if(b.name=="Star"){
 			//ALWAYS HEAT BECAUSE IT'S A STAR
 			haz.type=1;
+			int sev = Random.Range(40,100);
+			haz.severity=sev;
+
+			//ALWAYS EXISTS BECAUSE IT'S A STAR
+			haz.exists=true;
 		}
 
+		//Debug.Log("Hazard stuff: "+haz.type+" "+haz.severity+" "+haz.exists);
 		return haz;
 	}
 }

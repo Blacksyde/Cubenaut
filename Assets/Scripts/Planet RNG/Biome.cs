@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Biome : MonoBehaviour {
+public class Biome {
 	public Hazard hazard;
 
 	public Resource resource;
@@ -11,6 +11,10 @@ public class Biome : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+	}
+
+	public void Init(){
 		hazard=Hazard.getHazard(this);
 		resource=Resource.getResource(this);
 	}
