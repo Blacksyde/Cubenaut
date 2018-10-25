@@ -15,6 +15,6 @@ public class Resource : MonoBehaviour {
 	}
 
 	public static Resource getResource(Biome b){
-           return null;
+        return null;
     }
 }

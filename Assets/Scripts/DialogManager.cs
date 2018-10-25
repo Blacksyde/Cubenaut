@@ -38,10 +38,10 @@ public class DialogManager : MonoBehaviour {
 	public void TargetPlanet(Planet targetPlanet){
 		planetName.text = targetPlanet.name;
 		// Debug.Log(targetPlanet.rarity);
-		rarity.text = string.Format("Rarity {0}",targetPlanet.rarity);
-		biome.text = string.Format("biome {0}",targetPlanet.biome);
-		hazard.text = string.Format("hazard {0}",targetPlanet.hazard);
-		resource.text = string.Format("resource {0}",targetPlanet.resource);
+		rarity.text = "Rarity: "+targetPlanet.rarity.rarity_val;
+		hazard.text = "Hazard: "+targetPlanet.biome.hazard.type+" / Severity: "+targetPlanet.biome.hazard.severity+"% / Exists: "+targetPlanet.biome.hazard.exists;
+		biome.text = "Biome Name: "+targetPlanet.biome.name;
+		resource.text = "Resource: "+targetPlanet.biome.resource;
 		Dialog.SetActive(true);
 		sat.setMenuOpen(true);
 	}
