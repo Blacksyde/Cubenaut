@@ -9,11 +9,6 @@ public class Biome {
 
 	public string name;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
 	public void Init(){
 		hazard=Hazard.getHazard(this);
 		resource=Resource.getResource(this);

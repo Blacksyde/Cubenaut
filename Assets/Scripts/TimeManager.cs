@@ -5,26 +5,28 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour {
 
 	public static bool GameIsPaused = false;
-	public static int pauseTracker = 0;
 
 	public static void Resume () 
 	{
-		pauseTracker--;
-		if(pauseTracker == 0){
 			Time.timeScale = 1f;
 			GameIsPaused = false;
-		}
 		
-		Debug.Log("number of systems pausing: "+ pauseTracker);
-
 	}
 
-	public static void Pause ()
+	public static bool Pause ()
 	{
-		pauseTracker++;
-		Time.timeScale = 0f;
-		GameIsPaused = true;
+		
+		if(GameIsPaused)
+		{
+			Debug.Log("Game already paused");
+			return false;
 
-		Debug.Log("number of systems pausing: "+ pauseTracker);
+		}
+		else{
+			Time.timeScale = 0f;
+			GameIsPaused = true;
+			return true;
+		}
+		
 	} 
 }
