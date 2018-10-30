@@ -12,32 +12,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-10-30T17:47:06.849-05:00
+  lastUpdatedAtString: 2018-10-30T17:51:25.920-05:00
   initializedAtString: 2018-10-30T17:03:54.203-05:00
   entries:
-  - path: Assets\Scenes\Main.unity
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scenes\Main.unity
-    projectPath: Assets\Scenes\Main.unity
+  - path: Assembly-CSharp.csproj
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assembly-CSharp.csproj
+    projectPath: Assembly-CSharp.csproj
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\Sprites\Upgrade.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\Upgrade.meta
-    projectPath: Assets\Sprites\Upgrade.meta
+  - path: Assets\Scripts\SwitchtoUpgradeScene.cs
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Scripts\SwitchtoUpgradeScene.cs
+    projectPath: Assets\Scripts\SwitchtoUpgradeScene.cs
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Sprites\Upgrade\Upgrade.jpg
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\Upgrade\Upgrade.jpg
-    projectPath: Assets\Sprites\Upgrade\Upgrade.jpg
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Sprites\Upgrade\Upgrade.jpg.meta
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Assets\Sprites\Upgrade\Upgrade.jpg.meta
-    projectPath: Assets\Sprites\Upgrade\Upgrade.jpg.meta
-    originalPath: 
-    status: 1
+    status: 3
     staged: 0
   - path: Library\assetDatabase3
     fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\assetDatabase3
@@ -63,18 +51,6 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Library\gfu\cache\repoinfo.yaml
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\gfu\cache\repoinfo.yaml
-    projectPath: Library\gfu\cache\repoinfo.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\metadata\d3\d382548f6aff0e04d9fa692d879ba44f
-    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\metadata\d3\d382548f6aff0e04d9fa692d879ba44f
-    projectPath: Library\metadata\d3\d382548f6aff0e04d9fa692d879ba44f
-    originalPath: 
-    status: 3
-    staged: 0
   - path: Library\ScriptAssemblies\Assembly-CSharp.dll
     fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\ScriptAssemblies\Assembly-CSharp.dll
     projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
@@ -90,6 +66,12 @@ MonoBehaviour:
   - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\SpriteAtlasDatabase.asset
+    fullPath: C:\Users\tonyt\Desktop\Cubenaut\Library\SpriteAtlasDatabase.asset
+    projectPath: Library\SpriteAtlasDatabase.asset
     originalPath: 
     status: 3
     staged: 0
