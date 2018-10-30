@@ -6,8 +6,17 @@ public class SatUpgradeManager : MonoBehaviour {
 
 	public GameObject sat; 
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void upgradeProbe(){
+		sat.upgradeProbe();
+	}
+
+	public void upgradeProbe(){
+		sat.upgradeProbe();
+	}
+	public void upgradeProbe(){
+		sat.upgradeProbe();
+	}
+	public void upgradeProbe(){
+		sat.upgradeProbe();
 	}
 }
