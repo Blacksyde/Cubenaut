@@ -1292,12 +1292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d382548f6aff0e04d9fa692d879ba44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curr_battery: 0
+  research: 0
   information: 0
   money: 0
-  research: 0
-  curr_fuel: 0
-  scan_range: 0
-  curr_battery: 0
   targetPlanet: {fileID: 0}
   movementSpeed: 50000
   fuelRing: {fileID: 1316579674}
@@ -10425,7 +10423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a409438102e804ba12a71210153664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curr_fuel: {fileID: 714047497}
+  Booster_range: {fileID: 714047497}
   scan_range: {fileID: 1086687610}
   curr_battery: {fileID: 1669481893}
   Pb: {fileID: 1501153310}
