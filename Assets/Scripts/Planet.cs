@@ -8,6 +8,7 @@ public class Planet : MonoBehaviour {
 
 	public Biome biome;
 	public Rarity rarity;
+	public bool visited = false;
 
 	private int earth_dist;
 	private int galaxy_pos;
@@ -46,5 +47,9 @@ public class Planet : MonoBehaviour {
 	private void OnMouseDown(){
 		//Debug.Log("moused over and clicked "+transform.position);
 		sat.SetTargetPlanet(this);
+	}
+
+	private void visitPlanet(){
+		visited = true;
 	}
 }
