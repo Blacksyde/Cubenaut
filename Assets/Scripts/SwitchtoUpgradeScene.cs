@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SwitchtoUpgradeScene : MonoBehaviour {
-
+	public GameObject Upgrade; 
 	public void SwitchUpgradeScene(){
-		SceneManager.LoadScene(1);
+		Upgrade.SetActive(true);
 	}
 
 	public void SwitchMainScene(){
-		SceneManager.LoadScene(0);
+		Upgrade.SetActive(false);
 	}
 
 }
