@@ -79,6 +79,15 @@ public class Satellite : MonoBehaviour {
 	public int getScannerRange(){
 		return Scanner.Scan_range;
 	}
+	
+	public void upgradeProbe(){
+		Probe.upgrade(Probe.Tier+1);
+	}
+	
+	public void upgradeBooster(){
+		Booster.upgrade(Booster.Tier+1);
+	}
+	
 
 	void FixedUpdate()
     {	
