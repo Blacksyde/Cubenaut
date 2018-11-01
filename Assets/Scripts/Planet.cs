@@ -8,7 +8,6 @@ public class Planet : MonoBehaviour {
 
 	public Biome biome;
 	public Rarity rarity;
-	public bool visited = false;
 
 	private int earth_dist;
 	private int galaxy_pos;
@@ -18,6 +17,9 @@ public class Planet : MonoBehaviour {
 	public string name;
 
 	private Satellite sat;
+
+	public bool scanned = false;
+	private SpriteRenderer m_SpriteRenderer;
 	
 
 	// Use this for initialization
@@ -37,6 +39,9 @@ public class Planet : MonoBehaviour {
 		rarity = new Rarity();
 		rarity.Init();
 		biome=rarity.getBiome();
+
+		m_SpriteRenderer = GetComponent<SpriteRenderer>();
+		m_SpriteRenderer.color = Color.gray;
 	}
 	
 	// Update is called once per frame
@@ -49,7 +54,9 @@ public class Planet : MonoBehaviour {
 		sat.SetTargetPlanet(this);
 	}
 
-	private void visitPlanet(){
-		visited = true;
+	public void scanPlanet(){
+		scanned = true;
+		Debug.Log("scanned planet: " + name);
+		m_SpriteRenderer.color = Color.white;
 	}
 }

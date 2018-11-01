@@ -26,6 +26,10 @@ public class DialogManager : MonoBehaviour {
 	void OnScanClick(){
 		sat.setMenuOpen(false);
 	    Dialog.SetActive(false);
+		Planet p = sat.targetPlanet;
+		if (p != null){
+			p.scanPlanet();
+		}
 		sat.SetTargetPlanet(null); //set target to null so you go back to last planet
     }
 
