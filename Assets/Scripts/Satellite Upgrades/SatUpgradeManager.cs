@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class SatUpgradeManager : MonoBehaviour {
 
-	public GameObject sat; 
+	private Satellite sat; 
 	
-	/* public void upgradeProbe(){
-		sat.upgradeProbe();
+	void Start () {
+		sat = Object.FindObjectOfType<Satellite> ();
 	}
 
 	public void upgradeProbe(){
 		sat.upgradeProbe();
 	}
-	public void upgradeProbe(){
-		sat.upgradeProbe();
+	// public void upgradeScanner(){
+	// 	sat.upgradeScanner();
+	// }
+	public void upgradeBooster(){
+		sat.upgradeBooster();
 	}
-	public void upgradeProbe(){
-		sat.upgradeProbe();
-	}*/
+	// public void upgradeSubzero(){
+	// 	sat.upgradeSubzero();
+	// }
+	// public void upgradeHeat(){
+	// 	sat.upgradeHeat();
+	// }
 }
