@@ -18,12 +18,7 @@ public class Satellite : MonoBehaviour {
 	public int information;
 	public int money;
 
-
-
-
 	//may want to move these 3 to a game-manager-type script later
-
-
 	private int current_sprite;
 
 	public Planet targetPlanet;

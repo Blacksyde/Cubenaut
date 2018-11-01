@@ -6,7 +6,7 @@ public class SatUpgradeManager : MonoBehaviour {
 
 	public GameObject sat; 
 	
-	public void upgradeProbe(){
+	/* public void upgradeProbe(){
 		sat.upgradeProbe();
 	}
 
@@ -18,5 +18,5 @@ public class SatUpgradeManager : MonoBehaviour {
 	}
 	public void upgradeProbe(){
 		sat.upgradeProbe();
-	}
+	}*/
 }
