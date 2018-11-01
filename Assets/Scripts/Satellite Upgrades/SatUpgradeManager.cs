@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class SatUpgradeManager : MonoBehaviour {
 
-	public GameObject sat; 
+	private Satellite sat; 
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void Start () {
+		sat = Object.FindObjectOfType<Satellite> ();
 	}
+
+	public void upgradeProbe(){
+		sat.upgradeProbe();
+	}
+	// public void upgradeScanner(){
+	// 	sat.upgradeScanner();
+	// }
+	public void upgradeBooster(){
+		sat.upgradeBooster();
+	}
+	// public void upgradeSubzero(){
+	// 	sat.upgradeSubzero();
+	// }
+	// public void upgradeHeat(){
+	// 	sat.upgradeHeat();
+	// }
 }
