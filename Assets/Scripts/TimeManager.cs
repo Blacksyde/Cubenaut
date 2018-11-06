@@ -6,6 +6,11 @@ public class TimeManager : MonoBehaviour {
 
 	public static bool GameIsPaused = false;
 
+	void Start ()
+	{
+		Resume();
+	}
+
 	public static void Resume () 
 	{
 			Time.timeScale = 1f;

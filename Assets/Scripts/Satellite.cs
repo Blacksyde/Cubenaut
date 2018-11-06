@@ -157,11 +157,11 @@ public class Satellite : MonoBehaviour {
 
 	public void setMenuOpen(bool b){
 		if(b){
-			TimeManager.Pause();
+			menuOpen = TimeManager.Pause();
 		}
 		else{
 			TimeManager.Resume();
+			menuOpen = b;
 		}
-		menuOpen=b;
 	}
 }
