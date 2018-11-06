@@ -18,7 +18,12 @@ public class Satellite : MonoBehaviour {
 	public int information;
 	public int money;
 
+
+
+
 	//may want to move these 3 to a game-manager-type script later
+
+
 	private int current_sprite;
 
 	public Planet targetPlanet;
@@ -82,7 +87,22 @@ public class Satellite : MonoBehaviour {
 	public void upgradeBooster(){
 		Booster.upgrade(Booster.Tier+1);
 	}
+
+	public void upgradeScanner(){
+		Scanner.upgrade(Scanner.Tier+1);
+	}
+
+	public void upgradeBody(){
+		Body.upgrade(Body.Tier+1);
+	}
 	
+	public void upgradeSubzero(){
+		Subzero.upgrade(Subzero.Tier+1);
+	}
+
+	public void upgradeHeat(){
+		Heat.upgrade(Heat.Tier+1);
+	}
 
 	void FixedUpdate()
     {	
