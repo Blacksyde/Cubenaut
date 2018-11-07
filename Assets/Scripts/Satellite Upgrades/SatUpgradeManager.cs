@@ -15,6 +15,7 @@ public class SatUpgradeManager : MonoBehaviour {
 		cb = button.colors;
         cb.normalColor = Color.green;
         cb.highlightedColor = Color.green;
+        cb.disabledColor = Color.green;
 	
 	}
 
@@ -22,25 +23,28 @@ public class SatUpgradeManager : MonoBehaviour {
 
 	public void upgradeProbe(){
 		sat.upgradeProbe();
-		
 		button.colors = cb;
+		button.interactable = false;
 	}
 
 	public void upgradeBooster(){
 		sat.upgradeBooster();
 		button.colors = cb;
+		button.interactable = false;
 
 	}
 
 	public void upgradeBody(){
 		sat.upgradeBody();
 		button.colors = cb;
+		button.interactable = false;
 
 	}
 
 	public void upgradeScanner(){
 		sat.upgradeScanner();
 		button.colors = cb;
+		button.interactable = false;
 
 
 	}
@@ -48,13 +52,11 @@ public class SatUpgradeManager : MonoBehaviour {
 	public void upgradeSubzero(){
 		sat.upgradeSubzero();
 		button.colors = cb;
-
-
+		button.interactable = false;
 	}
 	public void upgradeHeat(){
 		sat.upgradeHeat();
 		button.colors = cb;
-
-
+		button.interactable = false;
 	}
 }

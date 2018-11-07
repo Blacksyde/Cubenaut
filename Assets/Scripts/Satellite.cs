@@ -6,6 +6,7 @@ public class Satellite : MonoBehaviour {
 
 
 	public int curr_battery;
+	private int true_battery;
 	//upgrades
 	private Body Body;
 	private Scanner Scanner;
@@ -59,6 +60,7 @@ public class Satellite : MonoBehaviour {
 		Heat.Start();
 		//hard coding some values in to make sure the rings work
 		curr_battery = 100;
+		true_battery = 100;
 		menuOpen=false;
 	}
 	
@@ -66,43 +68,65 @@ public class Satellite : MonoBehaviour {
 	void Update () {
 		//hard-coding some keys to change the size of the rings (for testing/slice)
 
-		curr_battery = curr_battery/Body.health_range*100;
+		curr_battery = true_battery*100/Body.health_range;
 		fuelRing.localScale = new Vector3 (1+(Booster.Ring_size/10.0f), 1+(Booster.Ring_size/10.0f), 1);
 		scannerRing.localScale = new Vector3(1+(Scanner.Scan_range/5.0f), 1+(Scanner.Scan_range/5.0f), 1);
 
 	}
 
+
+	//getSize
 	public int getBoosterSize(){
 		return Booster.Ring_size;
 	}
-
 	public int getScannerRange(){
 		return Scanner.Scan_range;
 	}
 	
+	//GetINfos
+	public string getBatteryInfo(){
+		string ret = string.Format("{0}/{1}", true_battery, Body.health_range);
+		return ret;
+	}
+	public string getScannerInfo(){
+		return Scanner.display_name;
+	}
+	public string getBoosterInfo(){
+		return Booster.display_name;
+	}
+	public string getProbeInfo(){
+		return Probe.display_name;
+	}
+	public string getSubzeroInfo(){
+		return Subzero.display_name;
+	}
+	public string getHeatInfo(){
+		return Heat.display_name;
+	}
+
+	//Upgrades
 	public void upgradeProbe(){
 		Probe.upgrade(Probe.Tier+1);
-	}
-	
+	}	
 	public void upgradeBooster(){
 		Booster.upgrade(Booster.Tier+1);
 	}
-
 	public void upgradeScanner(){
 		Scanner.upgrade(Scanner.Tier+1);
 	}
-
 	public void upgradeBody(){
 		Body.upgrade(Body.Tier+1);
-	}
-	
+	}	
 	public void upgradeSubzero(){
 		Subzero.upgrade(Subzero.Tier+1);
 	}
-
 	public void upgradeHeat(){
 		Heat.upgrade(Heat.Tier+1);
 	}
+
+
+
+
 
 	void FixedUpdate()
     {	

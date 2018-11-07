@@ -8,8 +8,11 @@ public class Heat   {
 	public int dmg_percentage; 
 	public string display_name;
 
-	private int[] dmg_percentages = {75,50,0};
-	private string[] display_names={"Heat Resist 1","Heat Resist 2","Subzero Immunity"};
+	private int[] dmg_percentages = {100,75,50,0};
+	private string[] display_names={"Heat Resist 0\n Take full damage from heat ",
+									"Heat Resist 1\n Take 25% less damage from heat ",
+									"Heat Resist 2\n Take 50% less damage from heat",
+									"Heat Immunity"};
 	// Use this for initialization
 	public void Start () {
 		Tier = 0;

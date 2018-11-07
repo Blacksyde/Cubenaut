@@ -9,7 +9,12 @@ public class Probe   {
 	public string display_name;
 
 	private int[] gain_percentages = {0, 15, 25, 50, 75,150};
-	private string[] display_names={"Probe 0","Probe 1", "Probe 2", "Probe 3","Probe 4","Probe Extra"};
+	private string[] display_names={"Probe 0\n 0% increase to Information gained",
+									"Probe 1\n 15% increase to Information gained", 
+									"Probe 2\n 25% increase to Information gained", 
+									"Probe 3\n 50% increase to Information gained",
+									"Probe 4\n 75% increase to Information gained",
+									"Probe Extra\n 150% increase to Information gained"};
 	// Use this for initialization
 	public void Start () {
 		Tier = 0;

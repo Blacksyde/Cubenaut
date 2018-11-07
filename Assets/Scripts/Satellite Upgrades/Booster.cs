@@ -8,8 +8,12 @@ public class Booster   {
 	public int Ring_size;
 	public string display_name;
 
-	private string[] display_names={"Booster 0","Booster 1", "Booster 2", "Booster 3","Booster 4"};
-	private int[] Ring_sizes={100,300,500,500,500};
+	private string[] display_names={"Booster 0\n You can travel to limited distance",
+									"Booster 1\n Expands travel range to medium distance planets", 
+									"Booster 2\n Expands travel range to the farthest planets in any galaxy", 
+									"Booster 3\n Allows travel to stars(overcome gravitational field)",
+									"Booster 4\n Allows travel to black holes(overcome gravitational field)"};
+	private int[] Ring_sizes={100,200,300,500,500};
 	// Use this for initialization
 	public void Start () {
 		Tier = 0;

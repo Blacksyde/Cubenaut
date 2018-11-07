@@ -8,8 +8,10 @@ public class Subzero   {
 	public int dmg_percentage; 
 	public string display_name;
 
-	private int[] dmg_percentages = {50,0};
-	private string[] display_names={"Subzero Resist","Subzero Immunity"};
+	private int[] dmg_percentages = {100,50,0};
+	private string[] display_names={"Subzero 0\n Take full damage from heat",
+									"Subzero Resist \n Take 50% less damage from heat",
+									"Subzero Immunity"};
 	// Use this for initialization
 	public void Start () {
 		Tier = 0;
