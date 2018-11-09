@@ -19,7 +19,7 @@ public class Satellite : MonoBehaviour {
 	public int information;
 	public int money;
 
-
+	public bool landed;
 
 
 	//may want to move these 3 to a game-manager-type script later
@@ -161,24 +161,42 @@ public class Satellite : MonoBehaviour {
 	}
 
 	void moveToTargetPlanet(){
-		if ((transform.position - targetPlanet.transform.position).magnitude < 1) {
+		float dist = (transform.position - targetPlanet.transform.position).magnitude/targetPlanet.transform.localScale.x;
+		//Debug.Log("DIST: "+dist);
+		if (dist < 5) {
+			if(!landed){
+				Debug.Log("LANDED!");
+			}
 			body.velocity = Vector3.zero;
-			this.transform.position = targetPlanet.transform.position;
+			//this.transform.position = targetPlanet.transform.position;
+			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
+			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime *(dist/2));
+			landed=true;
 		} else {
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
 			body.velocity = Vector3.zero;
 			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime);
+			landed=false;
 		}
 	}
 
 	void moveToLastPlanet(){
-		if ((transform.position - lastPlanet.transform.position).magnitude < 1) {
+		float dist = (transform.position - lastPlanet.transform.position).magnitude/lastPlanet.transform.localScale.x;
+		//Debug.Log("DIST: "+dist);
+		if (dist < 5) {
+			if(!landed){
+				Debug.Log("LANDED!");
+			}
 			body.velocity = Vector3.zero;
-			this.transform.position = lastPlanet.transform.position;
+			//this.transform.position = lastPlanet.transform.position;
+			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
+			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime * (dist/2));
+			landed=true;
 		} else {
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
 			body.velocity = Vector3.zero;
 			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime);
+			landed=false;
 		}
 	}
 

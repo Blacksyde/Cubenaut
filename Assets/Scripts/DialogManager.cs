@@ -36,6 +36,10 @@ public class DialogManager : MonoBehaviour {
 	void OnTravelClick(){
 		sat.setMenuOpen(false);
 		Dialog.SetActive(false);
+		if(sat.landed){
+			Debug.Log("TAKING OFF!");
+			sat.landed=false;
+		}
 	}
 
 

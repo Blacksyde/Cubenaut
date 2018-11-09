@@ -1816,6 +1816,7 @@ MonoBehaviour:
   research: 0
   information: 0
   money: 0
+  landed: 0
   targetPlanet: {fileID: 0}
   movementSpeed: 50000
   fuelRing: {fileID: 1316579674}
@@ -3166,7 +3167,7 @@ GameObject:
   - component: {fileID: 442138084}
   - component: {fileID: 442138086}
   m_Layer: 0
-  m_Name: StausManager
+  m_Name: StatusManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
