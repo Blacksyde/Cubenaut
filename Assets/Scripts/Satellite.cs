@@ -5,7 +5,7 @@ using UnityEngine;
 public class Satellite : MonoBehaviour {
 
 
-	public int curr_battery;
+	private int curr_battery;
 	private int true_battery;
 	//upgrades
 	private Body Body;
@@ -75,12 +75,15 @@ public class Satellite : MonoBehaviour {
 	}
 
 
-	//getSize
+	//getSize/value
 	public int getBoosterSize(){
 		return Booster.Ring_size;
 	}
 	public int getScannerRange(){
 		return Scanner.Scan_range;
+	}
+	public int getBatteryVal(){
+		return curr_battery;
 	}
 	
 	//GetINfos
