@@ -160,6 +160,10 @@ public class Satellite : MonoBehaviour {
 		menuOpen=true;
 	}
 
+	void collectResource(){
+		
+	}
+
 	void moveToTargetPlanet(){
 		if ((transform.position - targetPlanet.transform.position).magnitude < 1) {
 			body.velocity = Vector3.zero;

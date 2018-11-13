@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831719140036420}
   m_LocalRotation: {x: 0, y: 0, z: 0.71746725, w: 0.6965923}
-  m_LocalPosition: {x: -2.26, y: 8.47, z: 5.9801936}
+  m_LocalPosition: {x: -2.26, y: 8.47, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,11 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09947af81cea2c7469c37a9faea7b5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: {fileID: 0}
-  biome: {fileID: 0}
-  hazard: {fileID: 0}
-  resource: {fileID: 0}
   name: Name
+  scanned: 0
 --- !u!114 &114780611215847686
 MonoBehaviour:
   m_ObjectHideFlags: 1

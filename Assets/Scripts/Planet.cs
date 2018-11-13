@@ -20,10 +20,14 @@ public class Planet : MonoBehaviour {
 
 	public bool scanned = false;
 	private SpriteRenderer m_SpriteRenderer;
-	
+
+	public void setPosition (float x, float y) {
+		this.transform.position = new Vector3(x, y, 0.0f);
+	}
 
 	// Use this for initialization
 	void Start () {
+		// GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 0f, 0f, 1f, 1f);		
 		sat = Object.FindObjectOfType<Satellite> ();
 		
 		//randomize size of the planet
