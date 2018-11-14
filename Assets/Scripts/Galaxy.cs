@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Galaxy : MonoBehaviour {
 
@@ -20,25 +21,28 @@ public class Galaxy : MonoBehaviour {
 		{
 			if(counter == 2){
 				counter = 0;
-				radius += 5;
+				radius += 10;
 			}
-			System.Random rnd = new System.Random();
-			float new_x = rnd.Next(-radius, radius);
-			if(new_x == x)
-				x ++;
-			else
-				x = new_x;
-			if(counter == 1)
-				y = -1*Mathf.Sqrt(Mathf.Abs((radius*radius)-(x*x)));
-			else
-				y = Mathf.Sqrt(Mathf.Abs((radius*radius)-(x*x)));
-			planet.setPosition(x,y);
-			Debug.Log(x);
-			Debug.Log(y);
-			Debug.Log(radius);
-			Debug.Log("..............");
+			int angle = UnityEngine.Random.Range(0, 360);
+			Vector2 pos = PolarToCartesian(angle, radius);
+			foreach(Planet other in planets){
+				if(other!=planet){
+					float diffx = other.transform.position.x-pos[0];
+					float diffy = other.transform.position.y-pos[1];
+					double dist = Math.Sqrt(diffx*diffx+diffy*diffy);
+					if(dist<=3){
+						angle = UnityEngine.Random.Range(0, 360);
+						pos = PolarToCartesian(angle, radius);
+					}
+				}
+			}
+			//planet.setPosition(pos[0], pos[1]);
+			//Debug.Log("X: "+pos[0]);
+			//Debug.Log("Y: "+pos[1]);
+			//Debug.Log("RADIUS: "+radius);
+			//Debug.Log("..............");
 
-			counter ++;
+			counter++;
 		}	
 		
 	}
@@ -47,4 +51,12 @@ public class Galaxy : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public static Vector2 PolarToCartesian(double angle, double radius)
+    {
+        double angleRad = (Math.PI / 180.0) * (angle - 90);
+        float x = (float)(radius * System.Math.Cos(angleRad));
+        float y = (float)(radius * System.Math.Sin(angleRad));
+        return new Vector2(x,y);
+    }
 }
