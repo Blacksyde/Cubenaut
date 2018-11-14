@@ -36,7 +36,7 @@ public class Galaxy : MonoBehaviour {
 					}
 				}
 			}
-			//planet.setPosition(pos[0], pos[1]);
+			planet.setPosition(pos[0], pos[1]);
 			//Debug.Log("X: "+pos[0]);
 			//Debug.Log("Y: "+pos[1]);
 			//Debug.Log("RADIUS: "+radius);
