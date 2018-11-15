@@ -161,6 +161,7 @@ public class Satellite : MonoBehaviour {
 	}
 
 	void collectResource(){
+		research += targetPlanet.biome.resource.val;
 		
 	}
 
@@ -175,6 +176,7 @@ public class Satellite : MonoBehaviour {
 			//this.transform.position = targetPlanet.transform.position;
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
 			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime *(dist/2));
+			collectResource();
 			landed=true;
 		} else {
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
@@ -195,6 +197,7 @@ public class Satellite : MonoBehaviour {
 			//this.transform.position = lastPlanet.transform.position;
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
 			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime * (dist/2));
+			collectResource();
 			landed=true;
 		} else {
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
