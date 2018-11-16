@@ -8,6 +8,10 @@ public class Universe : MonoBehaviour {
 	public GameObject[] game_galaxies;
 	private Galaxy currentGalaxy;
 	
+	public int getCurrentGalaxyPost(){
+		return currentGalaxy.universe_pos;
+	}
+
 	private void activateGalaxy(int pos){
 		foreach (GameObject galaxy in game_galaxies){
 			galaxy.SetActive(false);
