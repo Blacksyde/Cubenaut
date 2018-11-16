@@ -13,6 +13,8 @@ public class DialogManager : MonoBehaviour {
 	public Text hazard;
 	public Text resource;
 
+	public Rings Rings;
+
 	private Satellite sat;
    
 	// Use this for initialization
@@ -24,11 +26,13 @@ public class DialogManager : MonoBehaviour {
 	
 
 	void OnScanClick(){
-		sat.setMenuOpen(false);
-	    Dialog.SetActive(false);
 		Planet p = sat.targetPlanet;
-		if (p != null){
-			p.scanPlanet();
+		if(p != null && Rings.canScan(p.GetComponent<CircleCollider2D>())){
+			sat.setMenuOpen(false);
+			Dialog.SetActive(false);
+			if (p != null){
+				p.scanPlanet();
+			}
 		}
 		sat.SetTargetPlanet(null); //set target to null so you go back to last planet
     }
