@@ -1380,8 +1380,6 @@ Transform:
   m_LocalPosition: {x: -452, y: -453.4, z: -18.5}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
-  - {fileID: 1245217041}
-  - {fileID: 1316579674}
   - {fileID: 536835778}
   m_Father: {fileID: 303277026}
   m_RootOrder: 1
@@ -1594,6 +1592,7 @@ Transform:
   m_Children:
   - {fileID: 1429659476}
   - {fileID: 266810135}
+  - {fileID: 1926079556}
   - {fileID: 1005467757}
   - {fileID: 1139058193}
   - {fileID: 2111712253}
@@ -2558,7 +2557,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 303277026}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &442138086
 MonoBehaviour:
@@ -3041,7 +3040,7 @@ Transform:
   m_LocalScale: {x: 4.3423543, y: 2.0004392, z: 1.0007614}
   m_Children: []
   m_Father: {fileID: 266810135}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.58000004, y: -0.88000005, z: -0.915}
 --- !u!114 &536835779
 MonoBehaviour:
@@ -6579,7 +6578,7 @@ RectTransform:
   - {fileID: 894745443}
   - {fileID: 1861043485}
   m_Father: {fileID: 303277026}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7435,7 +7434,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 303277026}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1160388514
 GameObject:
@@ -7730,6 +7729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245217041}
   - component: {fileID: 1245217042}
+  - component: {fileID: 1245217043}
   m_Layer: 0
   m_Name: Scanner Ring
   m_TagString: Untagged
@@ -7743,11 +7743,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1245217040}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7874016, y: 0.7874016, z: 3.1496065}
   m_Children: []
-  m_Father: {fileID: 266810135}
+  m_Father: {fileID: 1926079556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1245217042
@@ -7796,6 +7796,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1245217043
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1245217040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0316282, y: 0.08852059}
+  serializedVersion: 2
+  m_Radius: 2.145457
 --- !u!1 &1252565609
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,7 +7973,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4672026031598334, guid: 9dc4e90b68b31304e890f24e777fc151, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1230362697678808, guid: 9dc4e90b68b31304e890f24e777fc151, type: 2}
       propertyPath: m_Name
@@ -8234,6 +8249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316579674}
   - component: {fileID: 1316579675}
+  - component: {fileID: 1316579676}
   m_Layer: 0
   m_Name: Fuel Ring
   m_TagString: Untagged
@@ -8247,11 +8263,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1316579673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7874016, y: 0.7874016, z: 3.1496065}
   m_Children: []
-  m_Father: {fileID: 266810135}
+  m_Father: {fileID: 1926079556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1316579675
@@ -8300,6 +8316,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1316579676
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316579673}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0316282, y: 0.08852059}
+  serializedVersion: 2
+  m_Radius: 2.145457
 --- !u!1 &1337475286
 GameObject:
   m_ObjectHideFlags: 0
@@ -10761,6 +10792,55 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1924272677}
   m_CullTransparentMesh: 0
+--- !u!1 &1926079555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926079556}
+  - component: {fileID: 1926079557}
+  m_Layer: 5
+  m_Name: Rings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1926079556
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926079555}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -18.5}
+  m_LocalScale: {x: 0.3175, y: 0.3175, z: 0.3175}
+  m_Children:
+  - {fileID: 1245217041}
+  - {fileID: 1316579674}
+  m_Father: {fileID: 303277026}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -477.91, y: -438.7}
+  m_SizeDelta: {x: 100, y: 93.87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1926079557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926079555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab5b95088c4a0a4f9fc104114b682bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scannerCollider: {fileID: 1245217043}
+  fuelCollider: {fileID: 1316579676}
 --- !u!1 &1938396454
 GameObject:
   m_ObjectHideFlags: 0
@@ -11955,6 +12035,7 @@ MonoBehaviour:
   biome: {fileID: 2103407435}
   hazard: {fileID: 196222811}
   resource: {fileID: 1033365996}
+  Rings: {fileID: 1926079557}
 --- !u!4 &2111712253
 Transform:
   m_ObjectHideFlags: 0
@@ -11966,5 +12047,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 303277026}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
