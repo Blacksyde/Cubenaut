@@ -27,7 +27,7 @@ public class DialogManager : MonoBehaviour {
 
 	void OnScanClick(){
 		Planet p = sat.targetPlanet;
-		if(p != null && Rings.canScan(p.GetComponent<CircleCollider2D>())){
+		if(p != null){
 			sat.setMenuOpen(false);
 			Dialog.SetActive(false);
 			if (p != null){

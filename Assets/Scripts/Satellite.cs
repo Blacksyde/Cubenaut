@@ -29,7 +29,7 @@ public class Satellite : MonoBehaviour {
 
 	public Planet targetPlanet;
 
-	private Planet lastPlanet;
+	public Planet lastPlanet;
 
 	private Rigidbody2D body;
 
@@ -144,9 +144,7 @@ public class Satellite : MonoBehaviour {
     }
 
 	public void SetTargetPlanet(Planet p){
-		if(p==targetPlanet)
-			return;
-		else if(p==null){
+		if(p==null){
 			targetPlanet=null;
 			return;
 		}
@@ -160,13 +158,12 @@ public class Satellite : MonoBehaviour {
 		menuOpen=true;
 	}
 
-	void collectResource(){
-		research += targetPlanet.biome.resource.val;
-		
+	public void collectResource(int amt){
+		research += amt;
 	}
 
 	void moveToTargetPlanet(){
-		float dist = (transform.position - targetPlanet.transform.position).magnitude/targetPlanet.transform.localScale.x;
+		float dist = targetPlanetDist();
 		//Debug.Log("DIST: "+dist);
 		if (dist < 5) {
 			if(!landed){
@@ -175,8 +172,8 @@ public class Satellite : MonoBehaviour {
 			body.velocity = Vector3.zero;
 			//this.transform.position = targetPlanet.transform.position;
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
-			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime *(dist/2));
-			collectResource();
+			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime * dist/2);
+			//collectResource();
 			landed=true;
 		} else {
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
@@ -187,7 +184,7 @@ public class Satellite : MonoBehaviour {
 	}
 
 	void moveToLastPlanet(){
-		float dist = (transform.position - lastPlanet.transform.position).magnitude/lastPlanet.transform.localScale.x;
+		float dist = lastPlanetDist();
 		//Debug.Log("DIST: "+dist);
 		if (dist < 5) {
 			if(!landed){
@@ -196,8 +193,8 @@ public class Satellite : MonoBehaviour {
 			body.velocity = Vector3.zero;
 			//this.transform.position = lastPlanet.transform.position;
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
-			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime * (dist/2));
-			collectResource();
+			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime * dist/2);
+			//collectResource();
 			landed=true;
 		} else {
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
@@ -215,5 +212,13 @@ public class Satellite : MonoBehaviour {
 			TimeManager.Resume();
 			menuOpen = b;
 		}
+	}
+
+	public float targetPlanetDist(){
+		return (transform.position - targetPlanet.transform.position).magnitude/targetPlanet.transform.localScale.x;
+	}
+
+	public float lastPlanetDist(){
+		return (transform.position - lastPlanet.transform.position).magnitude/lastPlanet.transform.localScale.x;
 	}
 }

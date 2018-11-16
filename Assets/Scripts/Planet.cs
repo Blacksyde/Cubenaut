@@ -19,6 +19,8 @@ public class Planet : MonoBehaviour {
 	private Satellite sat;
 
 	public bool scanned = false;
+
+	public bool collected = false;
 	private SpriteRenderer m_SpriteRenderer;
 
 	public void setPosition (float x, float y) {
@@ -59,6 +61,14 @@ public class Planet : MonoBehaviour {
 	}
 
 	public void scanPlanet(){
+		//collect resources from the planet upon scan if you're on the planet and it hasn't been collected from yet
+		if(sat.landed&&!collected){
+			if((sat.targetPlanet==this&&sat.targetPlanetDist()<5)||(sat.lastPlanet==this&&sat.lastPlanetDist()<5)){
+				collected=true;
+				sat.collectResource(this.biome.resource.val);
+				Debug.Log("Got "+this.biome.resource.val+" resources from: " +name);
+			}
+		}
 		scanned = true;
 		Debug.Log("scanned planet: " + name);
 		m_SpriteRenderer.color = Color.white;
