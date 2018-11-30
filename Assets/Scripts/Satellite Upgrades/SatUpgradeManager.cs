@@ -13,9 +13,9 @@ public class SatUpgradeManager : MonoBehaviour {
 	void Start () {
 		sat = Object.FindObjectOfType<Satellite> ();
 		cb = button.colors;
-        cb.normalColor = Color.green;
-        cb.highlightedColor = Color.green;
-        cb.disabledColor = Color.green;
+        cb.normalColor = Color.blue;
+        cb.highlightedColor = Color.blue;
+        cb.disabledColor = Color.blue;
 	
 	}
 

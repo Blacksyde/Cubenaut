@@ -23,7 +23,7 @@ public class TreeH : MonoBehaviour {
 	public bool CheckUpgradable(Button[] PreReqs){
 		foreach (Button PreReq in PreReqs)
 		{
-			if(PreReq.colors.normalColor!=  Color.green){
+			if(PreReq.colors.normalColor!=  Color.blue){
 				return false;
 			}
 		}	
