@@ -7,12 +7,12 @@ public class Rings : MonoBehaviour {
 	public CircleCollider2D scannerCollider;
 	public CircleCollider2D fuelCollider;
 
-	public bool canScan (Collider2D otherCollider) {
-		return scannerCollider.IsTouching(otherCollider);
+	public bool canScan (CircleCollider2D otherCollider) {
+		return scannerCollider.bounds.Intersects(otherCollider.bounds);
 	}
 
-	public bool canTravel (Collider2D otherCollider) {
-		return fuelCollider.IsTouching(otherCollider);
+	public bool canTravel (CircleCollider2D otherCollider) {
+		return fuelCollider.bounds.Intersects(otherCollider.bounds);
 	}
 }
 

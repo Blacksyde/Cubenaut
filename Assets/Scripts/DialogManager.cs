@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour {
 	public Text hazard;
 	public Text resource;
 
-	public Rings Rings;
+	public Rings rings;
 
 	private Satellite sat;
    
@@ -22,6 +22,7 @@ public class DialogManager : MonoBehaviour {
 		scanButton.onClick.AddListener(OnScanClick);
 		travelButton.onClick.AddListener(OnTravelClick);
 		sat = Object.FindObjectOfType<Satellite> ();
+		rings = Object.FindObjectOfType<Rings> ();
 	}
 	
 
@@ -30,9 +31,11 @@ public class DialogManager : MonoBehaviour {
 		if(p != null){
 			sat.setMenuOpen(false);
 			Dialog.SetActive(false);
-			if (p != null){
+
+			if (rings.canScan(p.GetComponent<CircleCollider2D>())){
 				p.scanPlanet();
 			}
+			
 		}
 		sat.SetTargetPlanet(null); //set target to null so you go back to last planet
     }
