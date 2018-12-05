@@ -23,13 +23,14 @@ public class Planet : MonoBehaviour {
 	public bool collected = false;
 	private SpriteRenderer m_SpriteRenderer;
 
+
 	public void setPosition (float x, float y) {
 		this.transform.position = new Vector3(x, y, 0.0f);
 	}
 
 	// Use this for initialization
 	void Start () {
-		// GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 0f, 0f, 1f, 1f);		
+				
 		sat = Object.FindObjectOfType<Satellite> ();
 		
 		//randomize size of the planet
@@ -47,12 +48,30 @@ public class Planet : MonoBehaviour {
 		biome=rarity.getBiome();
 
 		m_SpriteRenderer = GetComponent<SpriteRenderer>();
-		m_SpriteRenderer.color = Color.gray;
+		// m_SpriteRenderer.color = Color.black;	
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+
+     
+    
+
+	public void Blink(){
+		if(m_SpriteRenderer.color == Color.black){
+			m_SpriteRenderer.color = Color.white;
+		}
+		else if(m_SpriteRenderer.color == Color.white){
+			m_SpriteRenderer.color = Color.black;
+		}
+	}
+
+	public void Disco(){
+		m_SpriteRenderer.color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
+	}
+
+	public void sizing(){
+		float scale = Random.Range (1.2f, 1.8f);
+		this.transform.localScale = new Vector3 (scale, scale, 1);
 	}
 
 	private void OnMouseDown(){

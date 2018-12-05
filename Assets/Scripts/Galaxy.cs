@@ -7,6 +7,7 @@ public class Galaxy : MonoBehaviour {
 
 	public Planet[] planets;
 	public GameObject star;
+	public int galaxy_theme;
 	public int universe_pos;
 
 	private string name;
@@ -17,6 +18,7 @@ public class Galaxy : MonoBehaviour {
 		int radius = 10;
 		float x = 0;
 		float y = 0;
+		InvokeRepeating("Theme", 0f, 0.3f);
 		foreach (Planet planet in planets)
 		{
 			if(counter == 2){
@@ -47,10 +49,29 @@ public class Galaxy : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	private double nextUpdate=1;
+     
+     // Update is called once per frame
+     void Theme(){
+     
+          // If the next update is reached
+        
+			  foreach(Planet p in planets){
+				  if (galaxy_theme == 1){
+					p.Blink();
+			  	  }
+				  if (galaxy_theme == 2){
+					p.Disco();
+			  	  }				
+				  if (galaxy_theme == 3){
+					p.sizing();
+			  	  }
+				  if (galaxy_theme == 4){
+					p.Blink();
+			  	  }									  
+				}
+	     
+     }
 
 	public static Vector2 PolarToCartesian(double angle, double radius)
     {

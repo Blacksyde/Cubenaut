@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour {
 
 	private AudioManager audioManager;
 
-	public Rings Rings;
+	public Rings rings;
 
 	private Satellite sat;
    
@@ -27,6 +27,7 @@ public class DialogManager : MonoBehaviour {
 		travelButton.onClick.AddListener(OnTravelClick);
 		sat = UnityEngine.Object.FindObjectOfType<Satellite> ();
 		audioManager=UnityEngine.Object.FindObjectOfType<AudioManager>();
+		rings = UnityEngine.Object.FindObjectOfType<Rings> ();
 	}
 	
 
@@ -37,7 +38,11 @@ public class DialogManager : MonoBehaviour {
 		if(p != null){
 			sat.setMenuOpen(false);
 			Dialog.SetActive(false);
-			p.scanPlanet();
+
+			if (rings.canScan(p.GetComponent<CircleCollider2D>())){
+				p.scanPlanet();
+			}
+			
 		}
 		sat.SetTargetPlanet(null); //set target to null so you go back to last planet
     }
