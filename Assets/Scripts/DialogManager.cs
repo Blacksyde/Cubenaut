@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.Timers;
 
 public class DialogManager : MonoBehaviour {
 	public Button scanButton;
@@ -13,6 +15,8 @@ public class DialogManager : MonoBehaviour {
 	public Text hazard;
 	public Text resource;
 
+	private AudioManager audioManager;
+
 	public Rings Rings;
 
 	private Satellite sat;
@@ -21,18 +25,19 @@ public class DialogManager : MonoBehaviour {
 	void Start () {
 		scanButton.onClick.AddListener(OnScanClick);
 		travelButton.onClick.AddListener(OnTravelClick);
-		sat = Object.FindObjectOfType<Satellite> ();
+		sat = UnityEngine.Object.FindObjectOfType<Satellite> ();
+		audioManager=UnityEngine.Object.FindObjectOfType<AudioManager>();
 	}
 	
 
 	void OnScanClick(){
 		Planet p = sat.targetPlanet;
+		//HOOK FOR SCAN SOUND
+		audioManager.PlaySound(11);
 		if(p != null){
 			sat.setMenuOpen(false);
 			Dialog.SetActive(false);
-			if (p != null){
-				p.scanPlanet();
-			}
+			p.scanPlanet();
 		}
 		sat.SetTargetPlanet(null); //set target to null so you go back to last planet
     }
@@ -40,10 +45,9 @@ public class DialogManager : MonoBehaviour {
 	void OnTravelClick(){
 		sat.setMenuOpen(false);
 		Dialog.SetActive(false);
-		if(sat.landed){
-			Debug.Log("TAKING OFF!");
-			sat.landed=false;
-		}
+		System.Timers.Timer t = Satellite.takeOffTimer;
+		t.Enabled=true;
+		audioManager.PlaySound(14);
 	}
 
 

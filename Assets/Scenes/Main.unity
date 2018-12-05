@@ -1321,6 +1321,7 @@ MonoBehaviour:
   money: 0
   landed: 0
   targetPlanet: {fileID: 0}
+  lastPlanet: {fileID: 0}
   movementSpeed: 50000
   fuelRing: {fileID: 1316579674}
   scannerRing: {fileID: 1245217041}
@@ -2623,7 +2624,7 @@ GameObject:
   - component: {fileID: 442138084}
   - component: {fileID: 442138086}
   m_Layer: 0
-  m_Name: StausManager
+  m_Name: StatusManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8311,6 +8312,16 @@ Prefab:
     - target: {fileID: 1230362697678808, guid: 9dc4e90b68b31304e890f24e777fc151, type: 2}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 82173736910579056, guid: 9dc4e90b68b31304e890f24e777fc151,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82374010853308916, guid: 9dc4e90b68b31304e890f24e777fc151,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc4e90b68b31304e890f24e777fc151, type: 2}

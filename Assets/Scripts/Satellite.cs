@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Timers;
 
 public class Satellite : MonoBehaviour {
 
+	public static System.Timers.Timer takeOffTimer;
 
 	private int curr_battery;
 	private int true_battery;
@@ -20,6 +23,8 @@ public class Satellite : MonoBehaviour {
 	public int money;
 
 	public bool landed;
+
+	private int starsVisited;
 
 
 	//may want to move these 3 to a game-manager-type script later
@@ -40,12 +45,15 @@ public class Satellite : MonoBehaviour {
 	private DialogManager Dialog;
 	//private bool dialogFlag = false;
 
+	private AudioManager audioManager;
+
 	private bool menuOpen;
 
 	// Use this for initialization
 	void Start () {
 		body = GetComponent<Rigidbody2D> ();
-		Dialog = Object.FindObjectOfType<DialogManager> ();
+		Dialog = UnityEngine.Object.FindObjectOfType<DialogManager> ();
+		audioManager=UnityEngine.Object.FindObjectOfType<AudioManager>();
 		Body = new Body();
 		Scanner = new Scanner();
 		Booster = new Booster();
@@ -61,13 +69,28 @@ public class Satellite : MonoBehaviour {
 		//hard coding some values in to make sure the rings work
 		curr_battery = 100;
 		true_battery = 100;
+		starsVisited=0;
 		menuOpen=false;
+		setUpTimer();
 	}
+
+	private void setUpTimer(){
+		takeOffTimer = new System.Timers.Timer();
+    	takeOffTimer.Elapsed+=new ElapsedEventHandler(OnTimedEvent);
+    	takeOffTimer.Interval=2000;
+		takeOffTimer.Enabled=false;
+	}
+
+	private static void OnTimedEvent(object source, ElapsedEventArgs e)
+ 	{
+     	Debug.Log("Takeoff timer ran out!");
+		takeOffTimer.Enabled=false;
+		takeOffTimer.Dispose();
+ 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//hard-coding some keys to change the size of the rings (for testing/slice)
-
 		curr_battery = true_battery*100/Body.health_range;
 		fuelRing.localScale = new Vector3 (1+(Booster.Ring_size/10.0f), 1+(Booster.Ring_size/10.0f), 1);
 		scannerRing.localScale = new Vector3(1+(Scanner.Scan_range/5.0f), 1+(Scanner.Scan_range/5.0f), 1);
@@ -133,7 +156,7 @@ public class Satellite : MonoBehaviour {
 
 	void FixedUpdate()
     {	
-		if (targetPlanet&&!menuOpen) {
+		if (targetPlanet&&!menuOpen&&!takeOffTimer.Enabled) {
 			moveToTargetPlanet();
 		}
 		else if(lastPlanet&&!menuOpen){
@@ -159,7 +182,9 @@ public class Satellite : MonoBehaviour {
 	}
 
 	public void collectResource(int amt){
-		research += amt;
+		information+=amt;
+		//HOOK FOR INFO COLLECTION SOUND
+		audioManager.PlaySound(5);
 	}
 
 	void moveToTargetPlanet(){
@@ -168,12 +193,19 @@ public class Satellite : MonoBehaviour {
 		if (dist < 5) {
 			if(!landed){
 				Debug.Log("LANDED!");
+				if(targetPlanet.biome.name=="Inhabited"){
+					//HOOK FOR INHABITED PLANET LANDING SOUND - TOO LONG
+					//audioManager.PlaySound(0);
+				}
+				else{
+					//HOOK FOR SATELLITE LANDING SOUND - TOO LONG
+					//audioManager.PlaySound(7);
+				}
 			}
 			body.velocity = Vector3.zero;
 			//this.transform.position = targetPlanet.transform.position;
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
 			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime * dist/2);
-			//collectResource();
 			landed=true;
 		} else {
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
@@ -189,12 +221,19 @@ public class Satellite : MonoBehaviour {
 		if (dist < 5) {
 			if(!landed){
 				Debug.Log("LANDED!");
+				if(lastPlanet.biome.name=="Inhabited"){
+					//HOOK FOR INHABITED PLANET LANDING SOUND - TOO LONG
+					//audioManager.PlaySound(0);
+				}
+				else{
+					//HOOK FOR SATELLITE LANDING SOUND - TOO LONG
+					//audioManager.PlaySound(7);
+				}
 			}
 			body.velocity = Vector3.zero;
 			//this.transform.position = lastPlanet.transform.position;
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
 			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime * dist/2);
-			//collectResource();
 			landed=true;
 		} else {
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
