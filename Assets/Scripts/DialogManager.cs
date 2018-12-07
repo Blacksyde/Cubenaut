@@ -20,6 +20,8 @@ public class DialogManager : MonoBehaviour {
 	public Rings rings;
 
 	private Satellite sat;
+
+	bool isOpen = false;
    
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,20 @@ public class DialogManager : MonoBehaviour {
 		audioManager=UnityEngine.Object.FindObjectOfType<AudioManager>();
 		rings = UnityEngine.Object.FindObjectOfType<Rings> ();
 	}
+
+	void Update () 
+	{
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (isOpen){
+				Dialog.SetActive(false);
+				sat.setMenuOpen(false);
+				isOpen = false;
+				sat.SetTargetPlanet(null);//return to prev planet
+			}
+		}		
+	}
+
 	
 
 	void OnScanClick(){
@@ -38,6 +54,7 @@ public class DialogManager : MonoBehaviour {
 		if(p != null){
 			sat.setMenuOpen(false);
 			Dialog.SetActive(false);
+			isOpen = true;
 
 			if (rings.canScan(p.GetComponent<CircleCollider2D>())){
 				p.scanPlanet();
@@ -50,6 +67,8 @@ public class DialogManager : MonoBehaviour {
 	void OnTravelClick(){
 		sat.setMenuOpen(false);
 		Dialog.SetActive(false);
+		isOpen = true;
+
 		System.Timers.Timer t = Satellite.takeOffTimer;
 		t.Enabled=true;
 		audioManager.PlaySound(14);
@@ -64,6 +83,22 @@ public class DialogManager : MonoBehaviour {
 		biome.text = "Biome Name: "+targetPlanet.biome.name;
 		resource.text = "Resource Amount: "+targetPlanet.biome.resource.val;
 		Dialog.SetActive(true);
+		PrepButtons(targetPlanet);
 		sat.setMenuOpen(true);
+		isOpen = true;
+	}
+
+		private void PrepButtons (Planet p){
+		if (rings.canScan(p.GetComponent<CircleCollider2D>())){
+			scanButton.gameObject.SetActive(true);
+		}else{
+			scanButton.gameObject.SetActive(false);
+		}
+
+		if (rings.canTravel(p.GetComponent<CircleCollider2D>())){
+			travelButton.gameObject.SetActive(true);
+		}else{
+			travelButton.gameObject.SetActive(false);
+		}
 	}
 }
