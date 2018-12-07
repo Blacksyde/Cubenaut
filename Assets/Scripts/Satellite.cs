@@ -50,58 +50,60 @@ public class Satellite : MonoBehaviour {
 	private bool menuOpen;
 
 	public void Load(){
-		SaveGame.Load();
-		curr_battery = SaveGame.Instance.curr_battery;
-		true_battery =SaveGame.Instance.true_battery ;
-		Body = SaveGame.Instance.Body ;
-		Scanner = SaveGame.Instance.Scanner ;
-		Booster = SaveGame.Instance.Booster ;
-		Probe = SaveGame.Instance.Probe ;
-		Subzero = SaveGame.Instance.Subzero ;
-		Heat = SaveGame.Instance.Heat ;
-		research = SaveGame.Instance.research ;
-		information = SaveGame.Instance.information ;
-		money = SaveGame.Instance.money;
-		landed = SaveGame.Instance.landed;
-		starsVisited = SaveGame.Instance.starsVisited ;
-		current_sprite = SaveGame.Instance.current_sprite ;
-		targetPlanet = SaveGame.Instance.targetPlanet ;
-		lastPlanet = SaveGame.Instance.lastPlanet ;
-		body = SaveGame.Instance.body ;
-		movementSpeed = SaveGame.Instance.movementSpeed ;
-		fuelRing = SaveGame.Instance.fuelRing ;
-		scannerRing = SaveGame.Instance.scannerRing ;
-		Dialog = SaveGame.Instance.Dialog  ;
-		audioManager = SaveGame.Instance.audioManager ;
-		menuOpen = SaveGame.Instance.menuOpen ;
+		curr_battery = PlayerPrefs.GetInt("curr_battery", 0);
+		true_battery = PlayerPrefs.GetInt("true_battery", 0);
+		money = PlayerPrefs.GetInt("money", 0);
+		// Body = SaveGame.Instance.Body ;
+		// Scanner = SaveGame.Instance.Scanner ;
+		// Booster = SaveGame.Instance.Booster ;
+		// Probe = SaveGame.Instance.Probe ;
+		// Subzero = SaveGame.Instance.Subzero ;
+		// Heat = SaveGame.Instance.Heat ;
+		// research = SaveGame.Instance.research ;
+		// information = SaveGame.Instance.information ;
+		// money = SaveGame.Instance.money;
+		// landed = SaveGame.Instance.landed;
+		// starsVisited = SaveGame.Instance.starsVisited ;
+		// current_sprite = SaveGame.Instance.current_sprite ;
+		// targetPlanet = SaveGame.Instance.targetPlanet ;
+		// lastPlanet = SaveGame.Instance.lastPlanet ;
+		// body = SaveGame.Instance.body ;
+		// movementSpeed = SaveGame.Instance.movementSpeed ;
+		// fuelRing = SaveGame.Instance.fuelRing ;
+		// scannerRing = SaveGame.Instance.scannerRing ;
+		// Dialog = SaveGame.Instance.Dialog  ;
+		// audioManager = SaveGame.Instance.audioManager ;
+		// menuOpen = SaveGame.Instance.menuOpen ;
 	}
 
 	public void Save(){
-		SaveGame.Instance.curr_battery = curr_battery;
-		SaveGame.Instance.true_battery = true_battery;
-		SaveGame.Instance.Body = Body;
-		SaveGame.Instance.Scanner = Scanner;
-		SaveGame.Instance.Booster = Booster;
-		SaveGame.Instance.Probe = Probe;
-		SaveGame.Instance.Subzero = Subzero;
-		SaveGame.Instance.Heat = Heat;
-		SaveGame.Instance.research = research;
-		SaveGame.Instance.information = information;
-		SaveGame.Instance.money = money;
-		SaveGame.Instance.landed = landed;
-		SaveGame.Instance.starsVisited = starsVisited;
-		SaveGame.Instance.current_sprite = current_sprite;
-		SaveGame.Instance.targetPlanet = targetPlanet;
-		SaveGame.Instance.lastPlanet = lastPlanet;
-		SaveGame.Instance.body = body;
-		SaveGame.Instance.movementSpeed = movementSpeed;
-		SaveGame.Instance.fuelRing = fuelRing;
-		SaveGame.Instance.scannerRing = scannerRing;
-		SaveGame.Instance.Dialog = Dialog;
-		SaveGame.Instance.audioManager = audioManager;
-		SaveGame.Instance.menuOpen = menuOpen;
-	//may want to move these 3 to a game-manager-type script later
-		SaveGame.Save();
+		PlayerPrefs.SetInt("curr_battery", curr_battery);
+		PlayerPrefs.SetInt("money", money);
+		PlayerPrefs.SetInt("true_battery", true_battery);
+	// 	SaveGame.Instance.true_battery = true_battery;
+	// 	SaveGame.Instance.Body = Body;
+	// 	SaveGame.Instance.Scanner = Scanner;
+	// 	SaveGame.Instance.Booster = Booster;
+	// 	SaveGame.Instance.Probe = Probe;
+	// 	SaveGame.Instance.Subzero = Subzero;
+	// 	SaveGame.Instance.Heat = Heat;
+	// 	SaveGame.Instance.research = research;
+	// 	SaveGame.Instance.information = information;
+	// 	SaveGame.Instance.money = money;
+	// 	SaveGame.Instance.landed = landed;
+	// 	SaveGame.Instance.starsVisited = starsVisited;
+	// 	SaveGame.Instance.current_sprite = current_sprite;
+	// 	SaveGame.Instance.targetPlanet = targetPlanet;
+	// 	SaveGame.Instance.lastPlanet = lastPlanet;
+	// 	SaveGame.Instance.body = body;
+	// 	SaveGame.Instance.movementSpeed = movementSpeed;
+	// 	SaveGame.Instance.fuelRing = fuelRing;
+	// 	SaveGame.Instance.scannerRing = scannerRing;
+	// 	SaveGame.Instance.Dialog = Dialog;
+	// 	SaveGame.Instance.audioManager = audioManager;
+	// 	SaveGame.Instance.menuOpen = menuOpen;
+	// //may want to move these 3 to a game-manager-type script later
+	// 	SaveGame.Save();
 	}
 
 	// Use this for initialization
@@ -127,7 +129,7 @@ public class Satellite : MonoBehaviour {
 		starsVisited=0;
 		menuOpen=false;
 		setUpTimer();
-		if (Global_Static.Continue){
+		if(Global_Static.Continue){
 			Load();
 		}
 	}
