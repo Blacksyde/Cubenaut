@@ -7,7 +7,7 @@ using System.Timers;
 public class Satellite : MonoBehaviour {
 
 	public static System.Timers.Timer takeOffTimer;
-
+	public int exploration = 0;
 	private int curr_battery;
 	private int true_battery;
 	//upgrades
@@ -242,6 +242,7 @@ public class Satellite : MonoBehaviour {
 	}
 
 	public void collectResource(int amt){
+		exploration ++;
 		information+=amt;
 		//HOOK FOR INFO COLLECTION SOUND
 		audioManager.PlaySound(5);
