@@ -111,6 +111,7 @@ public class Satellite : MonoBehaviour {
 		body = GetComponent<Rigidbody2D> ();
 		Dialog = UnityEngine.Object.FindObjectOfType<DialogManager> ();
 		audioManager=UnityEngine.Object.FindObjectOfType<AudioManager>();
+		audioManager.PlaySound(1);
 		Body = new Body();
 		Scanner = new Scanner();
 		Booster = new Booster();
@@ -137,7 +138,7 @@ public class Satellite : MonoBehaviour {
 	private void setUpTimer(){
 		takeOffTimer = new System.Timers.Timer();
     	takeOffTimer.Elapsed+=new ElapsedEventHandler(OnTimedEvent);
-    	takeOffTimer.Interval=2000;
+    	takeOffTimer.Interval=1300;
 		takeOffTimer.Enabled=false;
 	}
 
@@ -146,6 +147,7 @@ public class Satellite : MonoBehaviour {
      	Debug.Log("Takeoff timer ran out!");
 		takeOffTimer.Enabled=false;
 		takeOffTimer.Dispose();
+		//AUDIO HOOK FOR PLAYING FLIGHT SOUND ON LOOP
  	}
 	
 	// Update is called once per frame
@@ -256,10 +258,14 @@ public class Satellite : MonoBehaviour {
 				if(targetPlanet.biome.name=="Inhabited"){
 					//HOOK FOR INHABITED PLANET LANDING SOUND - TOO LONG
 					//audioManager.PlaySound(0);
+					//HOOK FOR STOPPING THE FLIGHT SOUND
+					audioManager.StopSound(16);
 				}
 				else{
 					//HOOK FOR SATELLITE LANDING SOUND - TOO LONG
-					//audioManager.PlaySound(7);
+					audioManager.PlaySound(7);
+					//HOOK FOR STOPPING THE FLIGHT SOUND
+					audioManager.StopSound(16);
 				}
 			}
 			body.velocity = Vector3.zero;
@@ -268,6 +274,8 @@ public class Satellite : MonoBehaviour {
 			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime * dist/2);
 			landed=true;
 		} else {
+			if(!audioManager.satFlight.isPlaying)
+				audioManager.PlaySound(16);
 			Vector3 direction = (targetPlanet.transform.position - transform.position).normalized;
 			body.velocity = Vector3.zero;
 			body.AddForce (targetPlanet.transform.position + direction * movementSpeed * Time.deltaTime);
@@ -284,10 +292,14 @@ public class Satellite : MonoBehaviour {
 				if(lastPlanet.biome.name=="Inhabited"){
 					//HOOK FOR INHABITED PLANET LANDING SOUND - TOO LONG
 					//audioManager.PlaySound(0);
+					//HOOK FOR STOPPING THE FLIGHT SOUND
+					audioManager.StopSound(16);
 				}
 				else{
 					//HOOK FOR SATELLITE LANDING SOUND - TOO LONG
-					//audioManager.PlaySound(7);
+					audioManager.PlaySound(7);
+					//HOOK FOR STOPPING THE FLIGHT SOUND
+					audioManager.StopSound(16);
 				}
 			}
 			body.velocity = Vector3.zero;
@@ -296,6 +308,8 @@ public class Satellite : MonoBehaviour {
 			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime * dist/2);
 			landed=true;
 		} else {
+			if(!audioManager.satFlight.isPlaying)
+				audioManager.PlaySound(16);
 			Vector3 direction = (lastPlanet.transform.position - transform.position).normalized;
 			body.velocity = Vector3.zero;
 			body.AddForce (lastPlanet.transform.position + direction * movementSpeed * Time.deltaTime);

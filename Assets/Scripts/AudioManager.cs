@@ -37,9 +37,11 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioSource upgradeSound;//15
 
+	public AudioSource satFlight;//16
+
 	// Use this for initialization
 	void Start () {
-		bgm1.Play();
+		//bgm1.Play();
 	}
 	
 	// Update is called once per frame
@@ -95,6 +97,18 @@ public class AudioManager : MonoBehaviour {
 		}
 		else if(which==15){
 			upgradeSound.Play();
+		}
+		else if(which==16){
+			satFlight.Play();
+		}
+	}
+
+	public void StopSound(int which){
+		if(which==1){
+			bgm1.Stop();
+		}
+		else if(which==16){
+			satFlight.Stop();
 		}
 	}
 }
